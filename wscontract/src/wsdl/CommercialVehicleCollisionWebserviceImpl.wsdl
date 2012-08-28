@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   Copyright 2012  Georgia Tech Research Institute
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<wsdl:definitions 
+    targetNamespace="urn:examples.com:techniques:iepd:commercialVehicleCollision:ws:2.0"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:tns="urn:examples.com:techniques:iepd:commercialVehicleCollision:ws:2.0"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+<!--
+    xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+-->
+        
+    <wsdl:import 
+        namespace="urn:examples.com:techniques:iepd:commercialVehicleCollision:ws:2.0"
+        location="CommercialVehicleCollisionWebserviceIntf.wsdl"/>
+    
+    <wsdl:service name="CommercialVehicleCollisionWebService">
+        <wsdl:port name="CommercialVehicleCollisionPort" binding="tns:CommercialVehicleCollisionBinding">
+            <!-- <soap:address location="REPLACE_WITH_ACTUAL_URL"/> -->
+            <soap:address location="http://localhost:8888/m1wsp/services/cvc"/>
+<!--<wsa10:EndpointReference xmlns:wsa10="http://www.w3.org/2005/08/addressing">
+	<wsa10:Address>http://dunland.ittl.gtri.org:8080/ConsumerProvider/CommercialVehicleCollisionPortType.svc</wsa10:Address>
+	<Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+		<KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+			<X509Data>
+				<X509Certificate>MIIDdDCCAt2gAwIBAgIBADANBgkqhkiG9w0BAQQFADCBiTELMAkGA1UEBhMCVVMxDzANBgNVBAgTBkhhd2FpaTERMA8GA1UEBxMISG9ub2x1bHUxFTATBgNVBAoTDEhhd2FpaSBGaXZlMDEQMA4GA1UEAxMHSEE1MFdTUDEtMCsGCSqGSIb3DQEJARYeZ2ZpcG0tc3VwcG9ydEBsaXN0cy5nYXRlY2guZWR1MB4XDTExMDQxMzE4NTAwMloXDTE2MDQxMTE4NTAwMlowgYkxCzAJBgNVBAYTAlVTMQ8wDQYDVQQIEwZIYXdhaWkxETAPBgNVBAcTCEhvbm9sdWx1MRUwEwYDVQQKEwxIYXdhaWkgRml2ZTAxEDAOBgNVBAMTB0hBNTBXU1AxLTArBgkqhkiG9w0BCQEWHmdmaXBtLXN1cHBvcnRAbGlzdHMuZ2F0ZWNoLmVkdTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAwpmVbSlljM0s0+g7o/T4j4On4WSUsWfdj1fNS8z/U07jXM+8RFkyiIVAISEtTxBJYZz7jo93VyTjjaIOCNf5s9sjBXYA0xjHq7hlMFbsbKrvAY0ipPNhNp0BKaSDCC+GM07VYZKpGwFBKptLm74VBQS9wuoOtrFQDnzaarZYYUMCAwEAAaOB6TCB5jAdBgNVHQ4EFgQURwozfRUJoOW8sG/MyqYX8U3x9sEwgbYGA1UdIwSBrjCBq4AURwozfRUJoOW8sG/MyqYX8U3x9sGhgY+kgYwwgYkxCzAJBgNVBAYTAlVTMQ8wDQYDVQQIEwZIYXdhaWkxETAPBgNVBAcTCEhvbm9sdWx1MRUwEwYDVQQKEwxIYXdhaWkgRml2ZTAxEDAOBgNVBAMTB0hBNTBXU1AxLTArBgkqhkiG9w0BCQEWHmdmaXBtLXN1cHBvcnRAbGlzdHMuZ2F0ZWNoLmVkdYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBAUAA4GBAGBXguXTNVx81rCo6eeLoNXFBLoTMtZWahlIa5uV3uofBnhZbKiLSUH5FFY/C8r1o7VdNkpJx3vBdMJmEK7YBgAl30dV2dfHfKFEgtKr298l+GRaMMokj+6ioEw6nlEHRb6xtdrTJUQ3RVrwTBpdOm6Ksg7nIeK1zR+0gijLHXeR</X509Certificate>
+			</X509Data>
+		</KeyInfo>
+	</Identity>
+</wsa10:EndpointReference>            -->
+        </wsdl:port>
+    </wsdl:service>
+    
+</wsdl:definitions>

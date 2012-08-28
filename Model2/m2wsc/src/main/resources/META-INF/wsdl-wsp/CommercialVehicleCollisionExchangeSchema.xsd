@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   Copyright 2012  Georgia Tech Research Institute
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<xsd:schema 
+	xmlns:iepd="urn:examples.com:techniques:iepd:commercialVehicleCollision:2.0" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xmime="http://www.w3.org/2005/05/xmlmime"
+	targetNamespace="urn:examples.com:techniques:iepd:commercialVehicleCollision:2.0"
+	version="1.0.0">
+	<!-- Import namespaces -->
+	<xsd:annotation>
+		<xsd:documentation>This is a line of documentation.</xsd:documentation>
+	</xsd:annotation>
+	<xsd:element name="CommercialVehicleCollisionDocument" type="iepd:CommercialVehicleCollisionDocumentType">
+		<xsd:annotation>
+			<xsd:documentation>A Commercial Vehicle Collision document</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="CommercialVehicleCollisionDocumentType">
+		<xsd:annotation>
+			<xsd:documentation>A document type that contains information on a collision between two or more persons and two or more commercial vehicles.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="iepd:DocumentFileControlID"/>
+			<xsd:element ref="iepd:IncidentText"/>
+			<xsd:element ref="iepd:InvolvedVehicleVIN" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="DocumentFileControlID" type="xsd:string"/>
+	<xsd:element name="IncidentText" type="xsd:string"/>
+	<xsd:element name="InvolvedVehicleVIN" type="xsd:string"/>
+
+	<!-- annotating the 'data' element below with xmime:expectedContentTypes will
+		 result in to this paramter mapped to java.awt.Image
+	 -->
+	<xsd:element name="Photo" type="xsd:base64Binary" xmime:expectedContentTypes="image/jpeg"/>
+	<xsd:element name="Data" type="xsd:base64Binary" xmime:expectedContentTypes="application/octet-stream"/>
+	<xsd:element name="PhotoControlID" type="xsd:string"/>
+	<xsd:element name="Size" type="xsd:int"/>
+
+</xsd:schema>

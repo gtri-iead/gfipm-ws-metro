@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+    targetNamespace="urn:examples.com:techniques:iepd:commercialVehicleCollision:ws:2.0"
+    xmlns:tns="urn:examples.com:techniques:iepd:commercialVehicleCollision:ws:2.0"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
+    xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" 
+    xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+    xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+    xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" 
+    xmlns:sc="http://schemas.sun.com/2006/03/wss/server" 
+    xmlns:scl="http://schemas.sun.com/2006/03/wss/client"
+    xmlns:wspp="http://java.sun.com/xml/ns/wsit/policy"     
+    xmlns:msg="urn:examples.com:techniques:iepd:commercialVehicleCollision:message:2.0"
+    xmlns="http://schemas.xmlsoap.org/wsdl/">
+    
+    <wsp:Policy wsu:Id="CalculatorServicePortBindingPolicy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <!-- WSP identity -->
+                <!-- REDIRECTING_WSC_REQUEST_TO_DIFFERENT_WSP -->
+                <scl:TrustStore wspp:visibility="private" peeralias="curewspm2" storepass="changeit" type="JKS" location="curewscm2-cacerts.jks"/>
+<!--                <scl:TrustStore wspp:visibility="private" peeralias="ha50wspm2" storepass="changeit" type="JKS" location="curewscm2-cacerts.jks"/>-->
+                <!-- WSC identity -->
+                <scl:KeyStore wspp:visibility="private" alias="curewscm2" storepass="changeit" type="JKS" location="curewscm2-keystore.jks"/>
+                
+                <!-- http://blogs.oracle.com/venu/entry/disabling_inclusiveprefixlist_in_wsit -->
+<!--                <scl:DisableInclusivePrefixList/>-->
+                
+                <!-- https://blogs.oracle.com/ashutosh/entry/custom_security_policy_assertions_in -->
+<!--                <scl:BSP10></scl:BSP10>-->
+<!--                <sp:InclusiveC14N/>-->
+<!--                <scl:InclusiveC14NWithComments scl:forTransforms="true" scl:forCm="true" />-->
+                
+                <scl:CallbackHandlerConfiguration wspp:visibility="private">
+                    <scl:CallbackHandler  name="samlHandler" classname="gov.niem.ws.sample.cvc.client.GFIPMWSCSamlCallbackHandler"/>
+                </scl:CallbackHandlerConfiguration>
+
+<!--                <tc:PreconfiguredSTS wspp:visibility="private" xmlns:tc="http://schemas.sun.com/ws/2006/05/trust/client"
+                        endpoint="http://cureidpm2:8080/m2sts/services/sts"
+                        metadata="http://cureidpm2:8080/m2sts/services/sts/mex">
+                </tc:PreconfiguredSTS>-->
+<!--                <tc:PreconfiguredSTS wspp:visibility="private" xmlns:tc="http://schemas.sun.com/ws/2006/05/trust/client"
+                        endpoint="https://cureidpm2:9191/m2sts/services/sts"
+                        metadata="https://cureidpm2:9191/m2sts/services/sts/mex">
+                </tc:PreconfiguredSTS>-->
+                <!-- portName="IWSTrust13Sync" -->
+<!--                <tc:PreconfiguredSTS wspp:visibility="private" xmlns:tc="http://schemas.sun.com/ws/2006/05/trust/client"
+                        endpoint="http://vpatlittrs239b.ittl.gtri.org:8089/ADS-STS/Issue.svc"
+                        wsdlLocation="http://vpatlittrs239b.ittl.gtri.org:8089/ADS-STS/Issue.svc?wsdl"
+                        serviceName="SecurityTokenService"
+                        portName="AssertionDelegateService"
+                        namespace="http://schemas.microsoft.com/ws/2008/06/identity/securitytokenservice"
+                        metadata="http://vpatlittrs239b.ittl.gtri.org:8089/ADS-STS/Issue.svc/mex">
+                </tc:PreconfiguredSTS>                -->
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    
+    <wsdl:types>
+	<!-- this is the WS-I BP-compliant way to import a schema -->
+    <!--
+        Note: in published WSDL following line present
+                <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                However to enable @SchemaValidation feature on the endpoint we
+                have to remove xmlns:xsd declaration.
+        -->
+        <xsd:schema>
+            <xsd:import
+          namespace="urn:examples.com:techniques:iepd:commercialVehicleCollision:message:2.0"
+          schemaLocation="CommercialVehicleCollisionMessageSchema.xml"/>
+        </xsd:schema>
+    </wsdl:types>
+
+    <wsdl:message name="getDocumentRequestMsg">
+        <wsdl:part name="parameters" element="msg:getDocumentRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="getDocumentResponseMsg">
+        <wsdl:part name="parameters" element="msg:getDocumentResponse"/>
+    </wsdl:message>
+  
+    <wsdl:message name="uploadPhotoRequestMsg">
+        <wsdl:part name="parameters" element="msg:uploadPhotoRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="uploadPhotoResponseMsg">
+        <wsdl:part name="parameters" element="msg:uploadPhotoResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="downloadDataRequestMsg">
+        <wsdl:part name="parameters" element="msg:downloadDataRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="downloadDataResponseMsg">
+        <wsdl:part name="parameters" element="msg:downloadDataResponse"/>
+    </wsdl:message>
+  
+
+    <wsdl:portType name="CommercialVehicleCollisionPortType">
+
+        <wsdl:operation name="getDocument">
+            <wsdl:input name="getDocumentRequest" message="tns:getDocumentRequestMsg"/>
+            <wsdl:output name="getDocumentResponse" message="tns:getDocumentResponseMsg"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="uploadPhoto">
+            <wsdl:input name="uploadPhotoRequest" message="tns:uploadPhotoRequestMsg"/>
+            <wsdl:output name="uploadPhotoResponse" message="tns:uploadPhotoResponseMsg"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="downloadData">
+            <wsdl:input name="downloadDataRequest" message="tns:downloadDataRequestMsg"/>
+            <wsdl:output name="downloadDataResponse" message="tns:downloadDataResponseMsg"/>
+        </wsdl:operation>
+
+    </wsdl:portType>
+
+    <wsdl:binding
+      name="CommercialVehicleCollisionBinding"
+      type="tns:CommercialVehicleCollisionPortType">
+        <wsp:PolicyReference URI="#CalculatorServicePortBindingPolicy"/>
+        
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+        <wsdl:operation name="getDocument">
+            <wsdl:input name="getDocumentRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getDocumentResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="uploadPhoto">
+            <wsdl:input name="uploadPhotoRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="uploadPhotoResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+	
+        <wsdl:operation name="downloadData">
+            <wsdl:input name="downloadDataRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="downloadDataResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    
+    </wsdl:binding>
+    
+</wsdl:definitions>

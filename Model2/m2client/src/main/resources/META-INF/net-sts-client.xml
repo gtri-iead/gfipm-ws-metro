@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions 
+    name="SecurityTokenService" 
+    targetNamespace="http://schemas.microsoft.com/ws/2008/06/identity/securitytokenservice" 
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+    xmlns:wsa10="http://www.w3.org/2005/08/addressing" 
+    xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" 
+    xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" 
+    xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" 
+    xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512" 
+    xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" 
+    xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" 
+    xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" 
+    xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" 
+    xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" 
+    xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" 
+    xmlns:tns="http://schemas.microsoft.com/ws/2008/06/identity/securitytokenservice" 
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"     
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+
+    <wsp:Policy wsu:Id="IdpStsCustomSecuredBinding_IWSTrust13Sync_policyMetro"
+                xmlns:sc="http://schemas.sun.com/2006/03/wss/client"
+                xmlns:scl="http://schemas.sun.com/2006/03/wss/client"
+                xmlns:wspp="http://java.sun.com/xml/ns/wsit/policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <!-- http://blogs.oracle.com/venu/entry/disabling_inclusiveprefixlist_in_wsit -->
+<!--                <sc:DisableInclusivePrefixList/>-->
+
+                <!-- https://blogs.oracle.com/ashutosh/entry/custom_security_policy_assertions_in -->
+<!--                <scl:BSP10></scl:BSP10>-->
+<!--                <sp:InclusiveC14N/>-->
+<!--                <scl:InclusiveC14NWithComments scl:forTransforms="true" scl:forCm="true" />-->
+
+<!--                <sc:KeyStore wspp:visibility="private" location="cure-client-keystore.jks" type="JKS" alias="alice" storepass="changeit"/>-->
+                <sc:TrustStore wspp:visibility="private" location="cure-client-cacerts.jks" type="JKS" peeralias="ha50idpm2" storepass="changeit"/>
+
+<!--                <sc:CallbackHandlerConfiguration>
+                    <sc:CallbackHandler  name="usernameHandler"  default="bob"/> 
+                    <sc:CallbackHandler  name="passwordHandler"  default="bob"/>
+                </sc:CallbackHandlerConfiguration> -->
+                <sc:CallbackHandlerConfiguration>
+                    <sc:CallbackHandler  name="usernameHandler"  classname="gov.niem.ws.sample.cvc.client.GFIPMUsernamePasswordCallbackHandler"/> 
+                    <sc:CallbackHandler  name="passwordHandler"  classname="gov.niem.ws.sample.cvc.client.GFIPMUsernamePasswordCallbackHandler"/>
+                </sc:CallbackHandlerConfiguration>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsdl:binding name="IdpStsCustomSecuredBinding_IWSTrust13Sync" type="tns:IWSTrust13Sync">
+        <wsp:PolicyReference URI="#IdpStsCustomSecuredBinding_IWSTrust13Sync_policyMetro"/>
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Trust13Cancel">
+            <soap:operation soapAction="http://docs.oasis-open.org/ws-sx/ws-trust/200512/RST/Cancel" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="Trust13Issue">
+            <soap:operation soapAction="http://docs.oasis-open.org/ws-sx/ws-trust/200512/RST/Issue" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="Trust13Renew">
+            <soap:operation soapAction="http://docs.oasis-open.org/ws-sx/ws-trust/200512/RST/Renew" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="Trust13Validate">
+            <soap:operation soapAction="http://docs.oasis-open.org/ws-sx/ws-trust/200512/RST/Validate" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:types/>
+    <wsdl:message name="IWSTrust13Sync_Trust13Cancel_InputMessage">
+        <wsdl:part name="message" element="q1:RequestSecurityToken" xmlns:q1="http://docs.oasis-open.org/ws-sx/ws-trust/200512"/>
+    </wsdl:message>
+    <wsdl:message name="IWSTrust13Sync_Trust13Cancel_OutputMessage">
+        <wsdl:part name="Trust13CancelResult" element="q2:RequestSecurityTokenResponseCollection" xmlns:q2="http://docs.oasis-open.org/ws-sx/ws-trust/200512"/>
+    </wsdl:message>
+    <wsdl:message name="IWSTrust13Sync_Trust13Issue_InputMessage">
+        <wsdl:part name="message" element="q3:RequestSecurityToken" xmlns:q3="http://docs.oasis-open.org/ws-sx/ws-trust/200512"/>
+    </wsdl:message>
+    <wsdl:message name="IWSTrust13Sync_Trust13Issue_OutputMessage">
+        <wsdl:part name="Trust13IssueResult" element="q4:RequestSecurityTokenResponseCollection" xmlns:q4="http://docs.oasis-open.org/ws-sx/ws-trust/200512"/>
+    </wsdl:message>
+    <wsdl:message name="IWSTrust13Sync_Trust13Renew_InputMessage">
+        <wsdl:part name="message" element="q5:RequestSecurityToken" xmlns:q5="http://docs.oasis-open.org/ws-sx/ws-trust/200512"/>
+    </wsdl:message>
+    <wsdl:message name="IWSTrust13Sync_Trust13Renew_OutputMessage">
+        <wsdl:part name="Trust13RenewResult" element="q6:RequestSecurityTokenResponseCollection" xmlns:q6="http://docs.oasis-open.org/ws-sx/ws-trust/200512"/>
+    </wsdl:message>
+    <wsdl:message name="IWSTrust13Sync_Trust13Validate_InputMessage">
+        <wsdl:part name="message" element="q7:RequestSecurityToken" xmlns:q7="http://docs.oasis-open.org/ws-sx/ws-trust/200512"/>
+    </wsdl:message>
+    <wsdl:message name="IWSTrust13Sync_Trust13Validate_OutputMessage">
+        <wsdl:part name="Trust13ValidateResult" element="q8:RequestSecurityTokenResponseCollection" xmlns:q8="http://docs.oasis-open.org/ws-sx/ws-trust/200512"/>
+    </wsdl:message>
+    <wsdl:portType name="IWSTrust13Sync">
+        <wsdl:operation name="Trust13Cancel">
+            <wsdl:input wsaw:Action="http://docs.oasis-open.org/ws-sx/ws-trust/200512/RST/Cancel" message="tns:IWSTrust13Sync_Trust13Cancel_InputMessage"/>
+            <wsdl:output wsaw:Action="http://docs.oasis-open.org/ws-sx/ws-trust/200512/RSTR/CancelFinal" message="tns:IWSTrust13Sync_Trust13Cancel_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="Trust13Issue">
+            <wsdl:input wsaw:Action="http://docs.oasis-open.org/ws-sx/ws-trust/200512/RST/Issue" message="tns:IWSTrust13Sync_Trust13Issue_InputMessage"/>
+            <wsdl:output wsaw:Action="http://docs.oasis-open.org/ws-sx/ws-trust/200512/RSTRC/IssueFinal" message="tns:IWSTrust13Sync_Trust13Issue_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="Trust13Renew">
+            <wsdl:input wsaw:Action="http://docs.oasis-open.org/ws-sx/ws-trust/200512/RST/Renew" message="tns:IWSTrust13Sync_Trust13Renew_InputMessage"/>
+            <wsdl:output wsaw:Action="http://docs.oasis-open.org/ws-sx/ws-trust/200512/RSTR/RenewFinal" message="tns:IWSTrust13Sync_Trust13Renew_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="Trust13Validate">
+            <wsdl:input wsaw:Action="http://docs.oasis-open.org/ws-sx/ws-trust/200512/RST/Validate" message="tns:IWSTrust13Sync_Trust13Validate_InputMessage"/>
+            <wsdl:output wsaw:Action="http://docs.oasis-open.org/ws-sx/ws-trust/200512/RSTR/ValidateFinal" message="tns:IWSTrust13Sync_Trust13Validate_OutputMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:service name="SecurityTokenService">
+        <wsdl:port name="CustomBinding_IWSTrust13Sync" binding="tns:IdpStsCustomSecuredBinding_IWSTrust13Sync">
+            <soap:address location="http://ha50idpm2:8080/Model2UserSts/Issue.svc"/>
+            <wsa10:EndpointReference>
+                <wsa10:Address>http://ha50idpm2:8080/Model2UserSts/Issue.svc</wsa10:Address>
+                <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+                    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+                        <X509Data>
+                            <X509Certificate>MIID/TCCAuWgAwIBAgIJAO7wjcAGYg9KMA0GCSqGSIb3DQEBBQUAMFwxHTAbBgkqhkiG9w0BCQEWDmhhNTBtMkBpZHAubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWhhNTBpZHBtMjAeFw0xMjA0MTgxNjE0MThaFw0xNzExMjYxNjE0MThaMFwxHTAbBgkqhkiG9w0BCQEWDmhhNTBtMkBpZHAubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWhhNTBpZHBtMjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMl48AzF74xyY+qo2KqhLIFzSM/th+f9kDZxY+rmA3NfsQg8tqiMvg/lmh90smE+qUzLh682m4tgMhcmEEDl2BonmYw3DRtMFFk62n4OXa1fD9TLXax6n9oy7AErsapJ4HBMwTQCb659ya9IzBAqa/0r9EQ7xlXorIHLaiLbnvwqgcCKqhiQz/7DLTdcTkPAVRCahEj0BoAgT7rIAQw0qkqc9uwUPQGvhHbiwBsjB5X5/07+UEmX1p56xrs2ChFBJeImZ5ohkP3EScFc1Jftiu9OlCxHrEp5EeXii35saNwpn6RQ4RpMaVQec1sdqlXrNxlPboS1xbCGE7Y94dFWQw8CAwEAAaOBwTCBvjAdBgNVHQ4EFgQUgmrRpAkIdqxDV4ztD+lpI5p2dkAwgY4GA1UdIwSBhjCBg4AUgmrRpAkIdqxDV4ztD+lpI5p2dkChYKReMFwxHTAbBgkqhkiG9w0BCQEWDmhhNTBtMkBpZHAubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWhhNTBpZHBtMoIJAO7wjcAGYg9KMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAFgRPN71JEtYUVNDcAwPy+bGzTx+euFjN5Tk7eU7XfWn82iLQ7GitiExPjM39hPCyKr3xR3kwhO6GenkLoS6jRzd0OQy9uaxLli3Ht59CQgY8B7EjdOBFy3SwGFUayyhDKYMdOfgkkEWP1Wp5L27KdMoEsfHm3FGyiIXXnmm3Vj0+85oh126HSOt2T4g4BwuzeaU+ZbzD8rS+0kxDn1XwtUKRXJX00Q5/gEx/mAXwg+whoeQLRuyuIHf+K2cOD4Knaq0FBxggRcy4PWRD97px4MfOfNM5Vz4KyO1t734BHMMagoNDuMrD6rpNx9t4WwvEDey3+AwnCrUV5RYlBJLFFs=</X509Certificate>
+                        </X509Data>
+                    </KeyInfo>
+                </Identity>
+            </wsa10:EndpointReference>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

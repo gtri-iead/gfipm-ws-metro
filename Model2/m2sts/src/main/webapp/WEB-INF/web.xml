@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+    xmlns="http://java.sun.com/xml/ns/javaee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <servlet>
+        <servlet-name>gov.niem.ws.sample.cvc.sts.STSImpl</servlet-name>
+        <servlet-class>gov.niem.ws.sample.cvc.sts.STSImpl</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+<!--    <servlet>
+        <servlet-name>com.sun.xml.ws.mex.server.MEXEndpoint</servlet-name>
+        <servlet-class>com.sun.xml.ws.mex.server.MEXEndpoint</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>-->
+    <servlet-mapping>
+        <servlet-name>gov.niem.ws.sample.cvc.sts.STSImpl</servlet-name>
+        <url-pattern>/services/sts</url-pattern>
+    </servlet-mapping>
+<!--    <servlet-mapping>
+        <servlet-name>com.sun.xml.ws.mex.server.MEXEndpoint</servlet-name>
+        <url-pattern>/services/sts/mex</url-pattern>
+    </servlet-mapping>-->
+    <servlet>
+        <servlet-name>gov.niem.ws.sample.cvc.sts.IDPImpl</servlet-name>
+        <servlet-class>gov.niem.ws.sample.cvc.sts.IDPImpl</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>gov.niem.ws.sample.cvc.sts.IDPImpl</servlet-name>
+        <url-pattern>/services/idp</url-pattern>
+    </servlet-mapping>    
+    <!--
+<web-app metadata-complete="true" version="2.5"
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+     -->
+    <!--
+        
+    <description>mtom.hello</description>
+    <display-name>mtom.hello</display-name>
+    -->
+    <!-- this will require use of javax.xml
+    <listener>
+        <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>services</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>services</servlet-name>
+        <url-pattern>/services/*</url-pattern>
+    </servlet-mapping>
+    -->
+    <!--    
+    <servlet>
+        <servlet-name>gov.niem.ws.sample.cvc.sts.STSImpl</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>com.sun.xml.ws.mex.server.MEXEndpoint</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>-->
+    
+<!--    <servlet-mapping>
+    <servlet-name>sts</servlet-name>
+    <url-pattern>/sts</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>sts</servlet-name>
+    <url-pattern>/sts/mex</url-pattern>
+    </servlet-mapping>    -->
+    
+<!--    <display-name>sts</display-name>
+    <description>sts</description>
+    <distributable/>
+    <listener>
+        <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>sts</servlet-name>
+        <display-name>sts</display-name>
+        <description>JAX-WS endpoint - sts</description>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sts</servlet-name>
+        <url-pattern>/sts</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>sts</servlet-name>
+        <url-pattern>/sts/mex</url-pattern>
+    </servlet-mapping>    -->
+    
+    <session-config>
+        <session-timeout>60</session-timeout>
+    </session-config>
+</web-app>

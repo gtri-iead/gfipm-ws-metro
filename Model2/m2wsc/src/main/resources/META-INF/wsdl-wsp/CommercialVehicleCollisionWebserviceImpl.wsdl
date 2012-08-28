@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   Copyright 2012  Georgia Tech Research Institute
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<wsdl:definitions 
+    targetNamespace="urn:examples.com:techniques:iepd:commercialVehicleCollision:ws:2.0"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:tns="urn:examples.com:techniques:iepd:commercialVehicleCollision:ws:2.0"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/"
+    xmlns="http://schemas.xmlsoap.org/wsdl/">
+        
+    <wsdl:import 
+        namespace="urn:examples.com:techniques:iepd:commercialVehicleCollision:ws:2.0"
+        location="CommercialVehicleCollisionWebserviceIntf.wsdl"/>
+    
+    <wsdl:service name="CommercialVehicleCollisionWebService">
+        <wsdl:port name="CommercialVehicleCollisionPort" binding="tns:CommercialVehicleCollisionBinding">
+            <wsdl:documentation>
+                <wsi:Claim conformsTo="http://ws-i.org/profiles/basic-profile/1.2/Conformant" />
+            </wsdl:documentation>
+            <soap:address location="https://curewspm2:8181/m2wsp/services/cvc"/>
+        </wsdl:port>
+    </wsdl:service>
+    
+</wsdl:definitions>

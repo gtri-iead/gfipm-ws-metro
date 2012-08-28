@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   Copyright 2012  Georgia Tech Research Institute
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<wsdl:definitions
+    targetNamespace="urn:examples.com:techniques:iepd:commercialVehicleCollision:ws:2.0"
+    xmlns:tns="urn:examples.com:techniques:iepd:commercialVehicleCollision:ws:2.0"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
+    xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+    xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" 
+    xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+    xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+    xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" 
+    xmlns:t="http://docs.oasis-open.org/ws-sx/ws-trust/200512"
+    xmlns:wsrmp="http://docs.oasis-open.org/ws-rx/wsrmp/200702"
+    xmlns:sc="http://schemas.sun.com/2006/03/wss/server" 
+    xmlns:wspp="http://java.sun.com/xml/ns/wsit/policy"     
+    xmlns:msg="urn:examples.com:techniques:iepd:commercialVehicleCollision:message:2.0"
+    xmlns="http://schemas.xmlsoap.org/wsdl/">
+        
+    <wsp:Policy wsu:Id="CommercialVehicleCollisionBindingPolicy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+<!--                <wsrmp:RMAssertion>
+                    <wsrmp:DeliveryAssurance>
+                        <wsp:Policy>
+                            <wsrmp:ExactlyOnce />
+                        </wsp:Policy>
+                    </wsrmp:DeliveryAssurance>
+                </wsrmp:RMAssertion>-->                
+                <wsoma:OptimizedMimeSerialization/>
+                <wsaw:UsingAddressing wsp:Optional="false"/>
+<!--                <wsam:Addressing wsp:Optional="false"/>-->
+                <!-- http://blogs.oracle.com/venu/entry/disabling_inclusiveprefixlist_in_wsit -->      
+<!--                <sunsp:DisableStreamingSecurity xmlns:sunsp="http://schemas.sun.com/2006/03/wss/client"/>-->
+                <sc:KeyStore wspp:visibility="private" location="curewspm2-keystore.jks" type="JKS" storepass="changeit" alias="curewspm2"/>
+                <sc:TrustStore wspp:visibility="private" location="curewspm2-cacerts.jks" type="JKS" storepass="changeit"/>
+                <sc:ValidatorConfiguration wspp:visibility="private" revocationEnabled="false">
+                    <sc:Validator name="certificateValidator" classname="gov.niem.ws.sample.cvc.service.GFIPMCertificateValidatorWSP"/>
+                    <sc:Validator name="samlAssertionValidator" classname="gov.niem.ws.sample.cvc.service.GFIPMSAMLAssertionValidatorWSP"/>
+                </sc:ValidatorConfiguration>
+                
+                <sp:AsymmetricBinding>
+                    <wsp:Policy>
+                        <sp:InitiatorToken>
+                            <wsp:Policy>
+                                <sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+                                    <wsp:Policy>
+                                        <sp:RequireThumbprintReference/>
+                                        <sp:WssX509V3Token10/>
+                                    </wsp:Policy>
+                                </sp:X509Token>
+                            </wsp:Policy>
+                        </sp:InitiatorToken>
+                        <sp:RecipientToken>
+                            <wsp:Policy>
+                                <sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never">
+                                    <wsp:Policy>
+                                        <sp:RequireThumbprintReference/>
+                                        <sp:WssX509V3Token10/>
+                                    </wsp:Policy>
+                                </sp:X509Token>
+                            </wsp:Policy>
+                        </sp:RecipientToken>                     
+                        <sp:Layout>
+                            <wsp:Policy>
+                                <sp:Lax/>
+                            </wsp:Policy>
+                        </sp:Layout>
+                        <sp:IncludeTimestamp/>
+                        <sp:OnlySignEntireHeadersAndBody/>
+                        <sp:AlgorithmSuite signatureAlgorithm="SHA256withRSA">
+                            <wsp:Policy>
+                                <sp:Basic256Sha256/>
+                            </wsp:Policy>
+                        </sp:AlgorithmSuite>
+                    </wsp:Policy>
+                </sp:AsymmetricBinding>
+<!--                <sp:TransportBinding>
+                    <wsp:Policy>
+                        <sp:TransportToken>
+                            <wsp:Policy>
+                                <sp:HttpsToken RequireClientCertificate="true"/>
+                            </wsp:Policy>
+                        </sp:TransportToken>
+                        <sp:AlgorithmSuite>
+                            <wsp:Policy>
+                                <sp:Basic256/>
+                            </wsp:Policy>
+                        </sp:AlgorithmSuite>
+                        <sp:Layout>
+                            <wsp:Policy>
+                                <sp:Lax/>
+                            </wsp:Policy>
+                        </sp:Layout>
+                        <sp:IncludeTimestamp/>
+                    </wsp:Policy>
+                </sp:TransportBinding>-->
+                <sp:Wss11>
+                    <wsp:Policy>
+                        <sp:MustSupportRefKeyIdentifier/>
+                        <sp:MustSupportRefIssuerSerial/>
+                        <sp:MustSupportRefThumbprint/>
+                        <sp:MustSupportRefEncryptedKey/>
+                        <!-- NOTE: when sp:TransportBinding is used sp:RequireSignatureConfirmation should be removed -->
+                        <sp:RequireSignatureConfirmation/>
+                    </wsp:Policy>
+                </sp:Wss11>
+                <sp:Trust13>
+                    <wsp:Policy>
+                        <sp:MustSupportIssuedTokens/>
+                        <sp:RequireClientEntropy/>
+                        <sp:RequireServerEntropy/>
+                    </wsp:Policy>
+                </sp:Trust13>                   
+                
+                <!-- Suggests Sender-Vouches confirmation method sp:SignedEncryptedSupportingTokens -->
+                <sp:SignedEncryptedSupportingTokens>
+                    <wsp:Policy>
+                        <sp:SamlToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+                            <wsp:Policy>
+                                <sp:WssSamlV20Token11/>
+                            </wsp:Policy>
+                        </sp:SamlToken>
+                    </wsp:Policy>
+                </sp:SignedEncryptedSupportingTokens>
+                
+                <!-- Bearer confirmation method -->
+<!--                <sp:SignedSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+                    <wsp:Policy>
+                        <sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+                            <Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+                                <Address xmlns="http://www.w3.org/2005/08/addressing">https://ha50idpm2:8543/ADS-STS/Issue.svc</Address>
+                                <Metadata xmlns="http://www.w3.org/2005/08/addressing">
+                                    <Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                        <wsx:MetadataSection xmlns="">
+                                            <wsx:MetadataReference>
+                                                <Address xmlns="http://www.w3.org/2005/08/addressing">https://ha50idpm2:8543/ADS-STS/Issue.svc/mex</Address>
+                                            </wsx:MetadataReference>
+                                        </wsx:MetadataSection>
+                                    </Metadata>
+                                </Metadata>
+                            </Issuer>
+                            <sp:RequestSecurityTokenTemplate>
+                                <trust:TokenType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV2.0</trust:TokenType>
+                                <trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/Bearer</trust:KeyType>
+                            </sp:RequestSecurityTokenTemplate>
+                            <wsp:Policy>
+                                <sp:RequireInternalReference/>
+                            </wsp:Policy>
+                        </sp:IssuedToken>
+                    </wsp:Policy>
+                </sp:SignedSupportingTokens>-->
+                
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+
+    <wsdl:types>
+	<!-- this is the WS-I BP-compliant way to import a schema -->
+    <!--
+        Note: in published WSDL following line present
+                <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                However to enable @SchemaValidation feature on the endpoint we
+                have to remove xmlns:xsd declaration.
+        -->
+        <xsd:schema>
+            <xsd:import
+                namespace="urn:examples.com:techniques:iepd:commercialVehicleCollision:message:2.0"
+                schemaLocation="CommercialVehicleCollisionMessageSchema.xsd"/>
+        </xsd:schema>
+    </wsdl:types>
+
+    <wsdl:message name="getDocumentRequestMsg">
+        <wsdl:part name="parameters" element="msg:getDocumentRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="getDocumentResponseMsg">
+        <wsdl:part name="parameters" element="msg:getDocumentResponse"/>
+    </wsdl:message>
+  
+    <wsdl:message name="uploadPhotoRequestMsg">
+        <wsdl:part name="parameters" element="msg:uploadPhotoRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="uploadPhotoResponseMsg">
+        <wsdl:part name="parameters" element="msg:uploadPhotoResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="downloadDataRequestMsg">
+        <wsdl:part name="parameters" element="msg:downloadDataRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="downloadDataResponseMsg">
+        <wsdl:part name="parameters" element="msg:downloadDataResponse"/>
+    </wsdl:message>
+  
+
+    <wsdl:portType name="CommercialVehicleCollisionPortType">
+
+        <wsdl:operation name="getDocument">
+            <wsdl:input name="getDocumentRequest" message="tns:getDocumentRequestMsg"/>
+            <wsdl:output name="getDocumentResponse" message="tns:getDocumentResponseMsg"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="uploadPhoto">
+            <wsdl:input name="uploadPhotoRequest" message="tns:uploadPhotoRequestMsg"/>
+            <wsdl:output name="uploadPhotoResponse" message="tns:uploadPhotoResponseMsg"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="downloadData">
+            <wsdl:input name="downloadDataRequest" message="tns:downloadDataRequestMsg"/>
+            <wsdl:output name="downloadDataResponse" message="tns:downloadDataResponseMsg"/>
+        </wsdl:operation>
+
+    </wsdl:portType>
+
+    <wsdl:binding
+        name="CommercialVehicleCollisionBinding"
+        type="tns:CommercialVehicleCollisionPortType">
+        <wsp:PolicyReference URI="#CommercialVehicleCollisionBindingPolicy"/>
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+        <wsdl:operation name="getDocument">
+            <wsdl:input name="getDocumentRequest">
+                <soap:body use="literal"/>
+                <wsp:PolicyReference URI="#CommercialVehicleCollisionBinding_getDocumentRequest_Policy"/>
+            </wsdl:input>
+            <wsdl:output name="getDocumentResponse">
+                <soap:body use="literal"/>
+                <wsp:PolicyReference URI="#CommercialVehicleCollisionBinding_getDocumentResponse_Policy"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="uploadPhoto">
+            <wsdl:input name="uploadPhotoRequest">
+                <soap:body use="literal"/>
+                <wsp:PolicyReference URI="#CommercialVehicleCollisionBinding_getDocumentRequest_Policy"/>
+            </wsdl:input>
+            <wsdl:output name="uploadPhotoResponse">
+                <soap:body use="literal"/>
+                <wsp:PolicyReference URI="#CommercialVehicleCollisionBinding_getDocumentResponse_Policy"/>
+            </wsdl:output>
+        </wsdl:operation>
+	
+        <wsdl:operation name="downloadData">
+            <wsdl:input name="downloadDataRequest">
+                <soap:body use="literal"/>
+                <wsp:PolicyReference URI="#CommercialVehicleCollisionBinding_getDocumentRequest_Policy"/>
+            </wsdl:input>
+            <wsdl:output name="downloadDataResponse">
+                <soap:body use="literal"/>
+                <wsp:PolicyReference URI="#CommercialVehicleCollisionBinding_getDocumentResponse_Policy"/>
+            </wsdl:output>
+        </wsdl:operation>
+    
+    </wsdl:binding>
+    <wsp:Policy wsu:Id="CommercialVehicleCollisionBinding_getDocumentRequest_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+<!--                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>-->
+                <sp:SignedParts>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+<!--                    <sp:Header Name="Assertion" Namespace="urn:oasis:names:tc:SAML:2.0:assertion"/>-->
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="CommercialVehicleCollisionBinding_getDocumentResponse_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+<!--                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>-->
+                <sp:SignedParts>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+</wsdl:definitions>

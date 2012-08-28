@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   Copyright 2012  Georgia Tech Research Institute
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<xsd:schema
+	xmlns:msg="urn:examples.com:techniques:iepd:commercialVehicleCollision:message:2.0"
+	xmlns:iepd="urn:examples.com:techniques:iepd:commercialVehicleCollision:2.0"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="urn:examples.com:techniques:iepd:commercialVehicleCollision:message:2.0"
+	version="1.0.0">
+	<!-- Import namespaces -->
+	<xsd:import namespace="urn:examples.com:techniques:iepd:commercialVehicleCollision:2.0" schemaLocation="CommercialVehicleCollisionExchangeSchema.xsd"/>
+	
+    <xsd:element name="getDocumentRequest" type="msg:GetDocumentRequestType">
+        <xsd:annotation>
+            <xsd:documentation>Request for a document.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    
+    <xsd:complexType name="GetDocumentRequestType">
+        <xsd:annotation>
+            <xsd:documentation>A structure that describes request for a document.</xsd:documentation>
+        </xsd:annotation>
+	    <xsd:sequence>
+   	        <xsd:element ref="iepd:DocumentFileControlID"/>
+   	     </xsd:sequence>
+    </xsd:complexType>      
+    
+    <xsd:element name="getDocumentResponse" type="msg:GetDocumentResponseType">
+        <xsd:annotation>
+            <xsd:documentation>Response to a request for a document.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    
+    <xsd:complexType name="GetDocumentResponseType">
+        <xsd:annotation>
+            <xsd:documentation>A structure that describes response to a request for a document.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element ref="iepd:CommercialVehicleCollisionDocument"/>
+        </xsd:sequence>
+    </xsd:complexType>    
+
+   <!--* MTOM samples *-->
+
+   <!--* Photo upload *-->   
+    <xsd:element name="uploadPhotoRequest" type="msg:UploadPhotoRequestType">
+        <xsd:annotation>
+            <xsd:documentation>Request for photo upload.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    
+    <xsd:complexType name="UploadPhotoRequestType">
+        <xsd:annotation>
+            <xsd:documentation>A structure that describes upload photo request.</xsd:documentation>
+        </xsd:annotation>
+	    <xsd:sequence>
+   	        <xsd:element ref="iepd:Photo"/>
+   	     </xsd:sequence>
+    </xsd:complexType>    
+    
+    <xsd:element name="uploadPhotoResponse" type="msg:UploadPhotoResponseType">
+        <xsd:annotation>
+            <xsd:documentation>Response to a request for a photo upload.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    
+    <xsd:complexType name="UploadPhotoResponseType">
+        <xsd:annotation>
+            <xsd:documentation>A structure that describes response to a request for a photo upload.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element ref="iepd:PhotoControlID"/>
+        </xsd:sequence>
+    </xsd:complexType>      
+
+   <!--* Data downloadData *-->       
+    <xsd:element name="downloadDataRequest" type="msg:downloadDataRequestType">
+        <xsd:annotation>
+            <xsd:documentation>Request for data download.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    
+    <xsd:complexType name="downloadDataRequestType">
+        <xsd:annotation>
+            <xsd:documentation>A structure that describes data download request.</xsd:documentation>
+        </xsd:annotation>
+	    <xsd:sequence>
+   	        <xsd:element ref="iepd:Size"/>
+   	     </xsd:sequence>
+    </xsd:complexType>    
+    
+    <xsd:element name="downloadDataResponse" type="msg:downloadDataResponseType">
+        <xsd:annotation>
+            <xsd:documentation>Response to a request for a data download.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    
+    <xsd:complexType name="downloadDataResponseType">
+        <xsd:annotation>
+            <xsd:documentation>A structure that describes response to a request for a data download.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element ref="iepd:Data"/>
+        </xsd:sequence>
+    </xsd:complexType>      
+    
+</xsd:schema>

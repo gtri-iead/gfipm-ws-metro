@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   Copyright 2012  Georgia Tech Research Institute
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<wsdl:definitions
+    targetNamespace="urn:examples.com:techniques:iepd:commercialVehicleCollision:ws:2.0"
+    xmlns:tns="urn:examples.com:techniques:iepd:commercialVehicleCollision:ws:2.0"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
+    xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"    
+    xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" 
+    xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+    xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+    xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" 
+    xmlns:t="http://docs.oasis-open.org/ws-sx/ws-trust/200512"
+    
+    xmlns:sc="http://schemas.sun.com/2006/03/wss/server" 
+    xmlns:wspp="http://java.sun.com/xml/ns/wsit/policy"     
+    xmlns:msg="urn:examples.com:techniques:iepd:commercialVehicleCollision:message:2.0"
+    xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+    <wsdl:types>
+    <!-- this is the WS-I BP-compliant way to import a schema -->
+    <!--
+        Note: in published WSDL following line present
+                <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                However to enable @SchemaValidation feature on the endpoint we
+                have to remove xmlns:xsd declaration.
+        -->
+        <xsd:schema>
+            <xsd:import
+          namespace="urn:examples.com:techniques:iepd:commercialVehicleCollision:message:2.0"
+          schemaLocation="CommercialVehicleCollisionMessageSchema.xsd"/>
+        </xsd:schema>
+    </wsdl:types>
+
+    <wsdl:message name="getDocumentRequestMsg">
+        <wsdl:part name="parameters" element="msg:getDocumentRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="getDocumentResponseMsg">
+        <wsdl:part name="parameters" element="msg:getDocumentResponse"/>
+    </wsdl:message>
+  
+    <wsdl:message name="uploadPhotoRequestMsg">
+        <wsdl:part name="parameters" element="msg:uploadPhotoRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="uploadPhotoResponseMsg">
+        <wsdl:part name="parameters" element="msg:uploadPhotoResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="downloadDataRequestMsg">
+        <wsdl:part name="parameters" element="msg:downloadDataRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="downloadDataResponseMsg">
+        <wsdl:part name="parameters" element="msg:downloadDataResponse"/>
+    </wsdl:message>
+  
+
+    <wsdl:portType name="CommercialVehicleCollisionPortType">
+
+        <wsdl:operation name="getDocument">
+            <wsdl:input name="getDocumentRequest" message="tns:getDocumentRequestMsg"/>
+            <wsdl:output name="getDocumentResponse" message="tns:getDocumentResponseMsg"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="uploadPhoto">
+            <wsdl:input name="uploadPhotoRequest" message="tns:uploadPhotoRequestMsg"/>
+            <wsdl:output name="uploadPhotoResponse" message="tns:uploadPhotoResponseMsg"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="downloadData">
+            <wsdl:input name="downloadDataRequest" message="tns:downloadDataRequestMsg"/>
+            <wsdl:output name="downloadDataResponse" message="tns:downloadDataResponseMsg"/>
+        </wsdl:operation>
+
+    </wsdl:portType>
+
+    <wsdl:binding
+      name="CommercialVehicleCollisionBinding"
+      type="tns:CommercialVehicleCollisionPortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+        <wsdl:operation name="getDocument">
+            <wsdl:input name="getDocumentRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getDocumentResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="uploadPhoto">
+            <wsdl:input name="uploadPhotoRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="uploadPhotoResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    
+        <wsdl:operation name="downloadData">
+            <wsdl:input name="downloadDataRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="downloadDataResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    
+    </wsdl:binding>
+</wsdl:definitions>

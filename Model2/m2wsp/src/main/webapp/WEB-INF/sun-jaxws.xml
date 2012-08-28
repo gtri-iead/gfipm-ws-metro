@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints xmlns='http://java.sun.com/xml/ns/jax-ws/ri/runtime' version='2.0'>
+    <!--
+
+    http://metro.java.net/guide/Deploying_Metro_endpoint.html
+    http://jax-ws.java.net/nonav/2.2.1/docs/jaxws-war.html
+    http://jax-ws.java.net/nonav/2.2.1/docs/sun-jaxws.xsd
+
+    -->
+
+
+    <endpoint
+        name="CVCEndpoint"
+        implementation="gov.niem.ws.sample.cvc.service.CommercialVehicleCollisionWebServiceImpl"
+        url-pattern="/services/cvc"/>
+        
+</endpoints>
+

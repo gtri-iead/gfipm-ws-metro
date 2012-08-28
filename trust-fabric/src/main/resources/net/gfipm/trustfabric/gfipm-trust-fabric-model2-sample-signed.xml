@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntitiesDescriptor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" validUntil="2022-05-18T00:00:00-04:00" ID="0a7a84dc-bdc6-4201-9487-7da14790997c" Name="sample-implementation:gfipm:ref" xmlns="urn:oasis:names:tc:SAML:2.0:metadata"><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI="#0a7a84dc-bdc6-4201-9487-7da14790997c"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>o2caGa7CAsyhFQXMXdOWtCMym2I=</DigestValue></Reference></SignedInfo><SignatureValue>lnYZX/rWSESrbVM+bcj0BlrYehv3aoPD2hlwheLnNNG0qWVPiS67yjmdwcvYaKLlov4aAeyru4kZPcduupWMcLbYv5X4UMK1GzvyYQxZ/duRlWfIqJgiW02zKaGzk797AW0r+qwcTMP9XFMfj1uxZTM3l+50YcD2EoAbEhfagxuU+a84zHPg2jz4O/OU3UWgA6zu/2o1u6iqZ5Tuv7OUKvfqBX8YkrHB0zcsTAVNVQZ2A6hQOUiBNEkTv5e9n0sNXla43bPCmzGOyojIbtlh15EEqTfuK65twI21SkcHWLcbT2j+9iI7ns0l3eG6RFdE6Qtn6WO9zLPwSiMMW30/ZkeU1fdgTpFvype773/vfD/KBlFe0XTbozP0N2rwtmEGzoutd1cROr3hdQeWkewzilAzW3sQQJ2nCSiv7w73B60i09HTqST0ZUPmyps7zCOqLXrhnP27piqYIf+6w5pKedxN71A0yyFb77Vq9OOX8HjyYuavJiWhudzTpX5MOTDs3/dOrp0YnpbvpdT3abssy/nyZZ/Gv4AdbbhoIywNnBHSHZuiupdnfVYKqHpYicOMhEoo7w7cnDqf0IeUvWKO8UVD7lpEiChnwTxlHMYdcXU1l8ZSOs5OGLSVn9UxjZIbMJy6rSPODun8UeWYkwy/3ctv+gWG68GeZqwv99dHtD4=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>0j7Etpn++n6z/NPs5752gdisHr9GwjFouKC12GIxK6bOwgMdNLvTfMp+34fwRGeKTkwM65zmNob6WXxDMZJEKoaGg2UBYwaYsW/lc1ZPJpyEACTSgIxIJB4HNJuJYUm7uO5jebUevLVt091IE/6HOpxuRQNKE753JJQprxTT5O/Kb8wXBTHNWMNtdpSgC38uv9Yt+vAnDYOkrZanr2dejRFjxf3ZzkD4vihGCucEcjzt51IicDI/T/kjPLj9qvlb0z0NUxS/rikSahB0G6Qrxw6DSutxq7vovfU3o3dFs2e6GQ19uB4ZjTF/6uXYD+BdKlaUgjwihZBb+mPv43scr9JWW2aShWs7ua9WihYfSCkbfj9zDPss25sCFdrVxpGYxdyYsF3FP2aWZJ9PaiaWy6lFZ+Gkk5OT4DWT2vhFQBymSxHs4Id5tz/3jGepFwZf+Q7IhaluHaFWooOw4cHadfhx4oaMDrHe8N7OnVVrHJ5ChaGyYBA1Nk0xJZeBhF8HK9sNYdeYTYiqGYg6xkuua82lDtbqwMmt2FMHQn2glZorxpcKiJf9G6ucwbN7gdAAEeRkoUnF/rf0DZWyb5NFGDJFqbx8mOtlFujT05NGq8l3oC5M3VKcnvlcuI6Ie9McentSGW+X0TrRbnoDn+lAVJvBhHNjfJcC6UuwECkRvmU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>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</X509Certificate></X509Data></KeyInfo></Signature>
+  <EntityDescriptor entityID="ha50wspm1">
+    <RoleDescriptor xmlns:q1="http://gfipm.net/standards/metadata/2.0/webservices" xsi:type="q1:GFIPMWebServiceProviderType" protocolSupportEnumeration="http://gfipm.net/standards/webservices/1.0/consumer-provider-sip.html" ServiceDisplayName="WebServiceProvider M1" ServiceDescription="The GFIPM HA50 M1 Web Service Provider">
+      <KeyDescriptor use="signing">
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <X509Data>
+            <X509Certificate>MIID/TCCAuWgAwIBAgIJAI4wDVafqrFdMA0GCSqGSIb3DQEBBQUAMFwxHTAbBgkqhkiG9w0BCQEWDmhhNTBtMUB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWhhNTB3c3BtMTAeFw0xMjA0MTgxODA0MjVaFw0xNzExMjYxODA0MjVaMFwxHTAbBgkqhkiG9w0BCQEWDmhhNTBtMUB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWhhNTB3c3BtMTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMgfYznHxSjzDEAJyVyEx3LgUGEKZhBUY7w8ngmLCj0dnzJUplRu/bQSxVgdwz9dCxL36p7oUDuFIJkZC7UpMFIOqneGMUV9p9VMcHshh+2G3a9NhUwa+8QxmAM/2jw6CCupLFrS4XHq3hCyQoKwO1oUdaBx1BgFqbZA69VBFe/0WJe5XBySSOdUpcxi+RP0dsKe7xSxPHNXFH4D9qpSqgNKMQ3jruC9dMAdO3AUi5WKnazKJ4R498P1GC7y76GHqG+YXXYClOjqFoSqqsP+WE8USWx/Xz9wmdJHBKoXZjYnD5pCj0NyCfHk13inNWBd1wY/GdyyYTL/8xUh895zMuMCAwEAAaOBwTCBvjAdBgNVHQ4EFgQUJO1v/1t8mvWOfnq7WkSokzSeNOIwgY4GA1UdIwSBhjCBg4AUJO1v/1t8mvWOfnq7WkSokzSeNOKhYKReMFwxHTAbBgkqhkiG9w0BCQEWDmhhNTBtMUB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWhhNTB3c3BtMYIJAI4wDVafqrFdMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBALtNyl4v7/6B9uFcSLDq612bVD13PirZw5fczF78Y6KbAzSCHQAsbVEe5rTwLUGJYD6oXS1MdhhYaJFfDPBWG5gt5Q7Tc8oA1eobvF7tPyWS7tyIH516jH7/Oe1k6l21qekCE53jebecOCQrl8ZS/G6Frs/mVeqsdzE2mG4W0S375N3nw14lmKNy/dRr/62bPOHzIArUwEY3JzemhFmOItkLs3/Fb5a9jLQxxnaRNoZ91UTCuw7XSrPcqc+rXUtoZo39wzoTJhUwtGAIgqR43AQyssZFl0kUzKpZ7YoapQyPx9fGbBEc+LDsLFq2UacbbdFRMpZKzRy9gTxgM9DkNAs=</X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </KeyDescriptor>
+      <KeyDescriptor use="encryption">
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <X509Data>
+            <X509Certificate>MIID/TCCAuWgAwIBAgIJAI4wDVafqrFdMA0GCSqGSIb3DQEBBQUAMFwxHTAbBgkqhkiG9w0BCQEWDmhhNTBtMUB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWhhNTB3c3BtMTAeFw0xMjA0MTgxODA0MjVaFw0xNzExMjYxODA0MjVaMFwxHTAbBgkqhkiG9w0BCQEWDmhhNTBtMUB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWhhNTB3c3BtMTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMgfYznHxSjzDEAJyVyEx3LgUGEKZhBUY7w8ngmLCj0dnzJUplRu/bQSxVgdwz9dCxL36p7oUDuFIJkZC7UpMFIOqneGMUV9p9VMcHshh+2G3a9NhUwa+8QxmAM/2jw6CCupLFrS4XHq3hCyQoKwO1oUdaBx1BgFqbZA69VBFe/0WJe5XBySSOdUpcxi+RP0dsKe7xSxPHNXFH4D9qpSqgNKMQ3jruC9dMAdO3AUi5WKnazKJ4R498P1GC7y76GHqG+YXXYClOjqFoSqqsP+WE8USWx/Xz9wmdJHBKoXZjYnD5pCj0NyCfHk13inNWBd1wY/GdyyYTL/8xUh895zMuMCAwEAAaOBwTCBvjAdBgNVHQ4EFgQUJO1v/1t8mvWOfnq7WkSokzSeNOIwgY4GA1UdIwSBhjCBg4AUJO1v/1t8mvWOfnq7WkSokzSeNOKhYKReMFwxHTAbBgkqhkiG9w0BCQEWDmhhNTBtMUB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWhhNTB3c3BtMYIJAI4wDVafqrFdMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBALtNyl4v7/6B9uFcSLDq612bVD13PirZw5fczF78Y6KbAzSCHQAsbVEe5rTwLUGJYD6oXS1MdhhYaJFfDPBWG5gt5Q7Tc8oA1eobvF7tPyWS7tyIH516jH7/Oe1k6l21qekCE53jebecOCQrl8ZS/G6Frs/mVeqsdzE2mG4W0S375N3nw14lmKNy/dRr/62bPOHzIArUwEY3JzemhFmOItkLs3/Fb5a9jLQxxnaRNoZ91UTCuw7XSrPcqc+rXUtoZo39wzoTJhUwtGAIgqR43AQyssZFl0kUzKpZ7YoapQyPx9fGbBEc+LDsLFq2UacbbdFRMpZKzRy9gTxgM9DkNAs=</X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </KeyDescriptor>
+      <q1:WebServiceEndpoint>
+        <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+          <Address>https://ha50wspm1:8443/Model1/CommercialVehicleCollisionWsp.svc</Address>
+        </EndpointReference>
+      </q1:WebServiceEndpoint>
+      <q1:MetadataExchangeEndpoint>
+        <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+          <Address>https://ha50wspm1:8443/Model1/CommercialVehicleCollisionWsp.svc/mex</Address>
+        </EndpointReference>
+      </q1:MetadataExchangeEndpoint>
+      <q1:WSDLURL>
+        <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+          <Address>https://ha50wspm1:8443/Model1/CommercialVehicleCollisionWsp.svc?wsdl</Address>
+        </EndpointReference>
+      </q1:WSDLURL>
+    </RoleDescriptor>
+    <ContactPerson contactType="technical">
+      <Company>HA50 Research Institute</Company>
+      <GivenName>Danny</GivenName>
+      <SurName>Williams</SurName>
+      <EmailAddress>danny.williams@wspm2.net</EmailAddress>
+      <TelephoneNumber>4945555555</TelephoneNumber>
+    </ContactPerson>
+  </EntityDescriptor>
+  <EntityDescriptor entityID="ha50wscm1">
+    <RoleDescriptor xmlns:q2="http://gfipm.net/standards/metadata/2.0/webservices" xsi:type="q2:GFIPMWebServiceConsumerType" protocolSupportEnumeration="http://gfipm.net/standards/webservices/1.0/consumer-provider-sip.html" ServiceDisplayName="WebServiceConsumer M1" ServiceDescription="The GFIPM HA50 M1 Web Service Consumer">
+      <Extensions>
+        <EntityAttribute xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="gfipm:2.0:entity:TechnicalRole" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" xmlns="http://gfipm.net/standards/metadata/2.0/entity">
+          <EntityAttributeValue xsi:type="xsd:string">WSC</EntityAttributeValue>
+        </EntityAttribute>
+        <EntityAttribute xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="gfipm:2.0:entity:OwnerAgencyCountryCode" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" xmlns="http://gfipm.net/standards/metadata/2.0/entity">
+          <EntityAttributeValue xsi:type="xsd:string">US</EntityAttributeValue>
+        </EntityAttribute>
+      </Extensions>
+      <KeyDescriptor use="signing">
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <X509Data>
+            <X509Certificate>MIID/TCCAuWgAwIBAgIJAJuNhijZVZbbMA0GCSqGSIb3DQEBBQUAMFwxHTAbBgkqhkiG9w0BCQEWDmhhNTBtMUB3c2MubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWhhNTB3c2NtMTAeFw0xMjA0MTgxODAyNDJaFw0xNzExMjYxODAyNDJaMFwxHTAbBgkqhkiG9w0BCQEWDmhhNTBtMUB3c2MubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWhhNTB3c2NtMTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKx8Xi06KU8Z1UQZavtcUS7YcGnpyBwBjx6qSS8v90iIjrPT2mp39m0OLRu1kBgpZWxjz2+72Tni+EBPbUR87vMrhO7np7rNDD3V7sr9o75MbJWtUv+DHsgg90Al/c6ZKPEiaSJ0ZA+e9nRzgg8YTTzzZwoWfNj9+13+DSf2FnxtaE4mAWGyvAXe308aa9Q1E0gA1ncD8c3PSiNabI3Gypy+h0EDxnUVBtI1uORqoTdXr1qyfkdIwUtgqJz2w3OO0/6hzGP36GODSXK2OMq1M9NHnjRwWKeLFiqxImJ5XbVkE0l+Lbrdy69Fmuz2PfxTQZ+xXYDMO43n2NmY88/5tscCAwEAAaOBwTCBvjAdBgNVHQ4EFgQUjv1O62Lyl5i9AZaJGTSkv07BYnAwgY4GA1UdIwSBhjCBg4AUjv1O62Lyl5i9AZaJGTSkv07BYnChYKReMFwxHTAbBgkqhkiG9w0BCQEWDmhhNTBtMUB3c2MubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWhhNTB3c2NtMYIJAJuNhijZVZbbMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAFIAPDa/HVgw1qvsMSMpbA4CYJCAuTmVvFERZ/lMq9lurA8pzhmyYL6bFctVALTHQB87om25zdugD+ug+Achy+/vRnZgYQMwKHB5eY4WsaQyuDiLANSnxHzGhggLBJ/ZN3/Cafs2Y7byk72O+QQiiRfBQluE8a9S1wBQYJ/BLUghVkqDpMitdqDoWgLfqOlHRP/BVNLw5EQa+XKHkxJKO/csfASdrc3n3zpaqVwOqJ3hU8wUoIpciNYYgnvRwf+o+Yggs37L0yHzbJM0Z23fYMlu7FoJaKK2ZiQdJpWzI49J/WeaAFkj1PYOqzacb8Y12ft7OsMJA9qFCQ46iTYQ0xA=</X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </KeyDescriptor>
+      <KeyDescriptor use="encryption">
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <X509Data>
+            <X509Certificate>MIID/TCCAuWgAwIBAgIJAJuNhijZVZbbMA0GCSqGSIb3DQEBBQUAMFwxHTAbBgkqhkiG9w0BCQEWDmhhNTBtMUB3c2MubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWhhNTB3c2NtMTAeFw0xMjA0MTgxODAyNDJaFw0xNzExMjYxODAyNDJaMFwxHTAbBgkqhkiG9w0BCQEWDmhhNTBtMUB3c2MubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWhhNTB3c2NtMTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKx8Xi06KU8Z1UQZavtcUS7YcGnpyBwBjx6qSS8v90iIjrPT2mp39m0OLRu1kBgpZWxjz2+72Tni+EBPbUR87vMrhO7np7rNDD3V7sr9o75MbJWtUv+DHsgg90Al/c6ZKPEiaSJ0ZA+e9nRzgg8YTTzzZwoWfNj9+13+DSf2FnxtaE4mAWGyvAXe308aa9Q1E0gA1ncD8c3PSiNabI3Gypy+h0EDxnUVBtI1uORqoTdXr1qyfkdIwUtgqJz2w3OO0/6hzGP36GODSXK2OMq1M9NHnjRwWKeLFiqxImJ5XbVkE0l+Lbrdy69Fmuz2PfxTQZ+xXYDMO43n2NmY88/5tscCAwEAAaOBwTCBvjAdBgNVHQ4EFgQUjv1O62Lyl5i9AZaJGTSkv07BYnAwgY4GA1UdIwSBhjCBg4AUjv1O62Lyl5i9AZaJGTSkv07BYnChYKReMFwxHTAbBgkqhkiG9w0BCQEWDmhhNTBtMUB3c2MubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWhhNTB3c2NtMYIJAJuNhijZVZbbMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAFIAPDa/HVgw1qvsMSMpbA4CYJCAuTmVvFERZ/lMq9lurA8pzhmyYL6bFctVALTHQB87om25zdugD+ug+Achy+/vRnZgYQMwKHB5eY4WsaQyuDiLANSnxHzGhggLBJ/ZN3/Cafs2Y7byk72O+QQiiRfBQluE8a9S1wBQYJ/BLUghVkqDpMitdqDoWgLfqOlHRP/BVNLw5EQa+XKHkxJKO/csfASdrc3n3zpaqVwOqJ3hU8wUoIpciNYYgnvRwf+o+Yggs37L0yHzbJM0Z23fYMlu7FoJaKK2ZiQdJpWzI49J/WeaAFkj1PYOqzacb8Y12ft7OsMJA9qFCQ46iTYQ0xA=</X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </KeyDescriptor>
+    </RoleDescriptor>
+    <ContactPerson contactType="technical">
+      <Company>HA50 Research Institute</Company>
+      <GivenName>Chin Ho</GivenName>
+      <SurName>Kelly</SurName>
+      <EmailAddress>chinho.Kelly@wscm2.net</EmailAddress>
+      <TelephoneNumber>4845555555</TelephoneNumber>
+    </ContactPerson>
+  </EntityDescriptor>
+  <EntityDescriptor entityID="ha50idpm2">
+    <RoleDescriptor xmlns:q3="http://gfipm.net/standards/metadata/2.0/webservices" xsi:type="q3:GFIPMAssertionDelegateServiceType" protocolSupportEnumeration="http://gfipm.net/standards/webservices/1.0/saml-assertion-delegate-service-sip.html" ServiceDisplayName="ADS for HA50IDPM2" ServiceDescription="The Assertion Delegate Service for the HA50 IDP M2">
+      <KeyDescriptor use="signing">
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <X509Data>
+            <X509Certificate>MIID/TCCAuWgAwIBAgIJAO7wjcAGYg9KMA0GCSqGSIb3DQEBBQUAMFwxHTAbBgkqhkiG9w0BCQEWDmhhNTBtMkBpZHAubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWhhNTBpZHBtMjAeFw0xMjA0MTgxNjE0MThaFw0xNzExMjYxNjE0MThaMFwxHTAbBgkqhkiG9w0BCQEWDmhhNTBtMkBpZHAubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWhhNTBpZHBtMjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMl48AzF74xyY+qo2KqhLIFzSM/th+f9kDZxY+rmA3NfsQg8tqiMvg/lmh90smE+qUzLh682m4tgMhcmEEDl2BonmYw3DRtMFFk62n4OXa1fD9TLXax6n9oy7AErsapJ4HBMwTQCb659ya9IzBAqa/0r9EQ7xlXorIHLaiLbnvwqgcCKqhiQz/7DLTdcTkPAVRCahEj0BoAgT7rIAQw0qkqc9uwUPQGvhHbiwBsjB5X5/07+UEmX1p56xrs2ChFBJeImZ5ohkP3EScFc1Jftiu9OlCxHrEp5EeXii35saNwpn6RQ4RpMaVQec1sdqlXrNxlPboS1xbCGE7Y94dFWQw8CAwEAAaOBwTCBvjAdBgNVHQ4EFgQUgmrRpAkIdqxDV4ztD+lpI5p2dkAwgY4GA1UdIwSBhjCBg4AUgmrRpAkIdqxDV4ztD+lpI5p2dkChYKReMFwxHTAbBgkqhkiG9w0BCQEWDmhhNTBtMkBpZHAubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWhhNTBpZHBtMoIJAO7wjcAGYg9KMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAFgRPN71JEtYUVNDcAwPy+bGzTx+euFjN5Tk7eU7XfWn82iLQ7GitiExPjM39hPCyKr3xR3kwhO6GenkLoS6jRzd0OQy9uaxLli3Ht59CQgY8B7EjdOBFy3SwGFUayyhDKYMdOfgkkEWP1Wp5L27KdMoEsfHm3FGyiIXXnmm3Vj0+85oh126HSOt2T4g4BwuzeaU+ZbzD8rS+0kxDn1XwtUKRXJX00Q5/gEx/mAXwg+whoeQLRuyuIHf+K2cOD4Knaq0FBxggRcy4PWRD97px4MfOfNM5Vz4KyO1t734BHMMagoNDuMrD6rpNx9t4WwvEDey3+AwnCrUV5RYlBJLFFs=</X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </KeyDescriptor>
+      <KeyDescriptor use="encryption">
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <X509Data>
+            <X509Certificate>MIID/TCCAuWgAwIBAgIJAO7wjcAGYg9KMA0GCSqGSIb3DQEBBQUAMFwxHTAbBgkqhkiG9w0BCQEWDmhhNTBtMkBpZHAubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWhhNTBpZHBtMjAeFw0xMjA0MTgxNjE0MThaFw0xNzExMjYxNjE0MThaMFwxHTAbBgkqhkiG9w0BCQEWDmhhNTBtMkBpZHAubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWhhNTBpZHBtMjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMl48AzF74xyY+qo2KqhLIFzSM/th+f9kDZxY+rmA3NfsQg8tqiMvg/lmh90smE+qUzLh682m4tgMhcmEEDl2BonmYw3DRtMFFk62n4OXa1fD9TLXax6n9oy7AErsapJ4HBMwTQCb659ya9IzBAqa/0r9EQ7xlXorIHLaiLbnvwqgcCKqhiQz/7DLTdcTkPAVRCahEj0BoAgT7rIAQw0qkqc9uwUPQGvhHbiwBsjB5X5/07+UEmX1p56xrs2ChFBJeImZ5ohkP3EScFc1Jftiu9OlCxHrEp5EeXii35saNwpn6RQ4RpMaVQec1sdqlXrNxlPboS1xbCGE7Y94dFWQw8CAwEAAaOBwTCBvjAdBgNVHQ4EFgQUgmrRpAkIdqxDV4ztD+lpI5p2dkAwgY4GA1UdIwSBhjCBg4AUgmrRpAkIdqxDV4ztD+lpI5p2dkChYKReMFwxHTAbBgkqhkiG9w0BCQEWDmhhNTBtMkBpZHAubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWhhNTBpZHBtMoIJAO7wjcAGYg9KMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAFgRPN71JEtYUVNDcAwPy+bGzTx+euFjN5Tk7eU7XfWn82iLQ7GitiExPjM39hPCyKr3xR3kwhO6GenkLoS6jRzd0OQy9uaxLli3Ht59CQgY8B7EjdOBFy3SwGFUayyhDKYMdOfgkkEWP1Wp5L27KdMoEsfHm3FGyiIXXnmm3Vj0+85oh126HSOt2T4g4BwuzeaU+ZbzD8rS+0kxDn1XwtUKRXJX00Q5/gEx/mAXwg+whoeQLRuyuIHf+K2cOD4Knaq0FBxggRcy4PWRD97px4MfOfNM5Vz4KyO1t734BHMMagoNDuMrD6rpNx9t4WwvEDey3+AwnCrUV5RYlBJLFFs=</X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </KeyDescriptor>
+      <q3:DelegatedTokenServiceEndpoint>
+        <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+          <Address>https://ha50idpm2:8543/Model2Ads/Issue.svc</Address>
+        </EndpointReference>
+      </q3:DelegatedTokenServiceEndpoint>
+      <q3:WSDLURL>
+        <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+          <Address>https://ha50idpm2:8543/Model2Ads/Issue.svc?wsdl</Address>
+        </EndpointReference>
+      </q3:WSDLURL>
+      <q3:MetadataExchangeEndpoint>
+        <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+          <Address>https://ha50idpm2:8543/Model2Ads/Issue.svc/mex</Address>
+        </EndpointReference>
+      </q3:MetadataExchangeEndpoint>
+    </RoleDescriptor>
+    <ContactPerson contactType="technical">
+      <Company>HA50 Research Institute</Company>
+      <GivenName>Steve</GivenName>
+      <SurName>McGarrett</SurName>
+      <EmailAddress>steve.mcgarrett@idpm2.net</EmailAddress>
+      <TelephoneNumber>4045555555</TelephoneNumber>
+    </ContactPerson>
+  </EntityDescriptor>
+  <EntityDescriptor entityID="ha50wspm2">
+    <RoleDescriptor xmlns:q4="http://gfipm.net/standards/metadata/2.0/webservices" xsi:type="q4:GFIPMWebServiceProviderType" protocolSupportEnumeration="http://gfipm.net/standards/webservices/1.0/user-consumer-provider-sip.html" ServiceDisplayName="WebServiceProvider M2" ServiceDescription="The GFIPM HA50 M2 Web Service Provider">
+      <KeyDescriptor use="signing">
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <X509Data>
+            <X509Certificate>MIIEBjCCAu6gAwIBAgIJAMOXnb+i7L4tMA0GCSqGSIb3DQEBBQUAMF8xHTAbBgkqhkiG9w0BCQEWDmhhNTBtMkB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExEDAOBgNVBAcTB0F0bGFudGExEjAQBgNVBAMTCWhhNTB3c3BtMjAeFw0xMjA0MTgxODA0MzNaFw0xNzExMjYxODA0MzNaMF8xHTAbBgkqhkiG9w0BCQEWDmhhNTBtMkB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExEDAOBgNVBAcTB0F0bGFudGExEjAQBgNVBAMTCWhhNTB3c3BtMjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL4hllapIpaCIg/01JpmxnV80apN87wH4t9B9fBNxnC5pqb4P6WAQ2TjwK2Q7USqMFvutygGSvP4yP1aXWCqSaTsS13ofH8k13i3DzHVwD5d5x847oMuC0Rxvqbv0JsT0jbKYy2ni0jqq2rVxBqdwhxdT8NTgUGS1lIG+7c9hOykLYIVoUl79SBHK0PYqkeP0JREtHim8+w9ZNWVVSnD0raFkZMo+Fqiq3Y69Ozcv107YaDstF9LWDi60MGALe/XZIxhjwgskq5bByKfyYsi92puMLkqb618+TtgQ0kEMiWp96yDU+kQVh9WMaDjylZUdZSM2VqUceKpGsySwAMwovUCAwEAAaOBxDCBwTAdBgNVHQ4EFgQULieiRbyPqobZ272vT3V5BJdRJgkwgZEGA1UdIwSBiTCBhoAULieiRbyPqobZ272vT3V5BJdRJgmhY6RhMF8xHTAbBgkqhkiG9w0BCQEWDmhhNTBtMkB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExEDAOBgNVBAcTB0F0bGFudGExEjAQBgNVBAMTCWhhNTB3c3BtMoIJAMOXnb+i7L4tMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAAClNJIRvb2qgL8apy/tpSobhGJOR1mWPqiJQWsyQ6wlvWZdUbHBYG3joAmFX2eRPBa0YvlKxAwYZCMwmqukJ4UPyNBoOXNklQh6UKBqgSfZd34FWpoVR0NilkP8UWNfaVqUK/oHQPL6sLBVteARRbXtdSij4IeCEFfRyFS8ekicI4W9+UWmhvJN9WmvujIH4H7vn9RdA+QIMdDschNpY2bqe3vZ/hFTTjV7AAgArtVB7/IYn64MgQA9GkJICFGZDlUfwZqTeCVIRB+tAIq7PGWZNW+sGcFzomrNtDlwegJjvTf+v93YglsBwFO7pRlgC68IfgrrN4KRHIo77MgUKss=</X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </KeyDescriptor>
+      <KeyDescriptor use="encryption">
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <X509Data>
+            <X509Certificate>MIIEBjCCAu6gAwIBAgIJAMOXnb+i7L4tMA0GCSqGSIb3DQEBBQUAMF8xHTAbBgkqhkiG9w0BCQEWDmhhNTBtMkB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExEDAOBgNVBAcTB0F0bGFudGExEjAQBgNVBAMTCWhhNTB3c3BtMjAeFw0xMjA0MTgxODA0MzNaFw0xNzExMjYxODA0MzNaMF8xHTAbBgkqhkiG9w0BCQEWDmhhNTBtMkB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExEDAOBgNVBAcTB0F0bGFudGExEjAQBgNVBAMTCWhhNTB3c3BtMjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL4hllapIpaCIg/01JpmxnV80apN87wH4t9B9fBNxnC5pqb4P6WAQ2TjwK2Q7USqMFvutygGSvP4yP1aXWCqSaTsS13ofH8k13i3DzHVwD5d5x847oMuC0Rxvqbv0JsT0jbKYy2ni0jqq2rVxBqdwhxdT8NTgUGS1lIG+7c9hOykLYIVoUl79SBHK0PYqkeP0JREtHim8+w9ZNWVVSnD0raFkZMo+Fqiq3Y69Ozcv107YaDstF9LWDi60MGALe/XZIxhjwgskq5bByKfyYsi92puMLkqb618+TtgQ0kEMiWp96yDU+kQVh9WMaDjylZUdZSM2VqUceKpGsySwAMwovUCAwEAAaOBxDCBwTAdBgNVHQ4EFgQULieiRbyPqobZ272vT3V5BJdRJgkwgZEGA1UdIwSBiTCBhoAULieiRbyPqobZ272vT3V5BJdRJgmhY6RhMF8xHTAbBgkqhkiG9w0BCQEWDmhhNTBtMkB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExEDAOBgNVBAcTB0F0bGFudGExEjAQBgNVBAMTCWhhNTB3c3BtMoIJAMOXnb+i7L4tMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAAClNJIRvb2qgL8apy/tpSobhGJOR1mWPqiJQWsyQ6wlvWZdUbHBYG3joAmFX2eRPBa0YvlKxAwYZCMwmqukJ4UPyNBoOXNklQh6UKBqgSfZd34FWpoVR0NilkP8UWNfaVqUK/oHQPL6sLBVteARRbXtdSij4IeCEFfRyFS8ekicI4W9+UWmhvJN9WmvujIH4H7vn9RdA+QIMdDschNpY2bqe3vZ/hFTTjV7AAgArtVB7/IYn64MgQA9GkJICFGZDlUfwZqTeCVIRB+tAIq7PGWZNW+sGcFzomrNtDlwegJjvTf+v93YglsBwFO7pRlgC68IfgrrN4KRHIo77MgUKss=</X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </KeyDescriptor>
+      <q4:WebServiceEndpoint>
+        <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+          <Address>https://ha50wspm2:8553/Model2/CommercialVehicleCollisionWsp.svc</Address>
+        </EndpointReference>
+      </q4:WebServiceEndpoint>
+      <q4:MetadataExchangeEndpoint>
+        <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+          <Address>https://ha50wspm2:8553/Model2/CommercialVehicleCollisionWsp.svc/mex</Address>
+        </EndpointReference>
+      </q4:MetadataExchangeEndpoint>
+      <q4:WSDLURL>
+        <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+          <Address>https://ha50wspm2:8553/Model2/CommercialVehicleCollisionWsp.svc?wsdl</Address>
+        </EndpointReference>
+      </q4:WSDLURL>
+    </RoleDescriptor>
+    <ContactPerson contactType="technical">
+      <Company>HA50 Research Institute</Company>
+      <GivenName>Danny</GivenName>
+      <SurName>Williams</SurName>
+      <EmailAddress>danny.williams@wspm2.net</EmailAddress>
+      <TelephoneNumber>4945555555</TelephoneNumber>
+    </ContactPerson>
+  </EntityDescriptor>
+  <EntityDescriptor entityID="ha50wscm2">
+    <RoleDescriptor xmlns:q5="http://gfipm.net/standards/metadata/2.0/webservices" xsi:type="q5:GFIPMWebServiceConsumerType" protocolSupportEnumeration="http://gfipm.net/standards/webservices/1.0/user-consumer-provider-sip.html" ServiceDisplayName="WebServiceConsumer M2" ServiceDescription="The GFIPM HA50 M2 Web Service Consumer">
+      <Extensions>
+        <EntityAttribute xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="gfipm:2.0:entity:TechnicalRole" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" xmlns="http://gfipm.net/standards/metadata/2.0/entity">
+          <EntityAttributeValue xsi:type="xsd:string">WSC</EntityAttributeValue>
+        </EntityAttribute>
+        <EntityAttribute xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="gfipm:2.0:entity:OwnerAgencyCountryCode" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" xmlns="http://gfipm.net/standards/metadata/2.0/entity">
+          <EntityAttributeValue xsi:type="xsd:string">US</EntityAttributeValue>
+        </EntityAttribute>
+      </Extensions>
+      <KeyDescriptor use="signing">
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <X509Data>
+            <X509Certificate>MIIEAzCCAuugAwIBAgIJAMLVmcjjDwOkMA0GCSqGSIb3DQEBBQUAMF4xHTAbBgkqhkiG9w0BCQEWDmhhNTBtMkB3c2MubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCVFgxDzANBgNVBAcTBkRhbGxhczESMBAGA1UEAxMJaGE1MHdzY20yMB4XDTEyMDQxODE3MzI0N1oXDTE3MTEyNjE3MzI0N1owXjEdMBsGCSqGSIb3DQEJARYOaGE1MG0yQHdzYy5uZXQxCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJUWDEPMA0GA1UEBxMGRGFsbGFzMRIwEAYDVQQDEwloYTUwd3NjbTIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDOK0FRAqbsaTPyio4G1LX2ONYCuHv2NvfGDeJR1Xyeid5l4fNeL35lrlhjp3/GTVippYN44Cbo62yUGqLjsJLbUiQnBYbR7nv5SJESBRsGrULQn2B+Wx3yCLe4TfPQahEIm0crjtiTcUtVDqtTaYmuKUMsx/MjC9AEwqG7XWKl0MRE4FzOjoBHF7D8aroUoO6T5mnPWXfgsncKLNQZbirIWJgbRsUqFj0NKCnNhqlbNgClGBT/gDJPD6/BXKOdd0ElkDEJIouiEuUPPJBMZlPi+tuXElgbSYoEfjbgIo9dimtcGlXJdTyab6eukcUwwMcr6NRAhycEcXn9dW17cBNlAgMBAAGjgcMwgcAwHQYDVR0OBBYEFCfYodbxWVBoNp58Rzz3jifP08H9MIGQBgNVHSMEgYgwgYWAFCfYodbxWVBoNp58Rzz3jifP08H9oWKkYDBeMR0wGwYJKoZIhvcNAQkBFg5oYTUwbTJAd3NjLm5ldDELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAlRYMQ8wDQYDVQQHEwZEYWxsYXMxEjAQBgNVBAMTCWhhNTB3c2NtMoIJAMLVmcjjDwOkMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAGImnSqmMfFoFsbMVOmCvRoyDgdkIKQ7OSG+z5ZVDuOAci1Uih/HUaSyQY9zsaQSb0Q2RRcxLa1AS1YLApoVuBX9Id5gPkNVmzyE6bOlhTWxbsSepWxVcw3eDSalLhB1RMVl+UbVjQsDe4Njii0pqKQzBs502kP2yFLk+sohGhNpepBFZvnqmlEZIwkrpUHGny0S/3AdRSQNbJhVlwIgRW2TV913OsvVJ/rfZrYDB74cDr6Ir5i0uZ56KBQVqV3I4YKQhe0QDzq6DfuLBMDNKD4LoGyZSJMe1udtqTYFJJpKhS04yWsIrXHx1boDs/i4DF5nTCYKqY2MXHuPVK1M5DQ=</X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </KeyDescriptor>
+      <KeyDescriptor use="encryption">
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <X509Data>
+            <X509Certificate>MIIEAzCCAuugAwIBAgIJAMLVmcjjDwOkMA0GCSqGSIb3DQEBBQUAMF4xHTAbBgkqhkiG9w0BCQEWDmhhNTBtMkB3c2MubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCVFgxDzANBgNVBAcTBkRhbGxhczESMBAGA1UEAxMJaGE1MHdzY20yMB4XDTEyMDQxODE3MzI0N1oXDTE3MTEyNjE3MzI0N1owXjEdMBsGCSqGSIb3DQEJARYOaGE1MG0yQHdzYy5uZXQxCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJUWDEPMA0GA1UEBxMGRGFsbGFzMRIwEAYDVQQDEwloYTUwd3NjbTIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDOK0FRAqbsaTPyio4G1LX2ONYCuHv2NvfGDeJR1Xyeid5l4fNeL35lrlhjp3/GTVippYN44Cbo62yUGqLjsJLbUiQnBYbR7nv5SJESBRsGrULQn2B+Wx3yCLe4TfPQahEIm0crjtiTcUtVDqtTaYmuKUMsx/MjC9AEwqG7XWKl0MRE4FzOjoBHF7D8aroUoO6T5mnPWXfgsncKLNQZbirIWJgbRsUqFj0NKCnNhqlbNgClGBT/gDJPD6/BXKOdd0ElkDEJIouiEuUPPJBMZlPi+tuXElgbSYoEfjbgIo9dimtcGlXJdTyab6eukcUwwMcr6NRAhycEcXn9dW17cBNlAgMBAAGjgcMwgcAwHQYDVR0OBBYEFCfYodbxWVBoNp58Rzz3jifP08H9MIGQBgNVHSMEgYgwgYWAFCfYodbxWVBoNp58Rzz3jifP08H9oWKkYDBeMR0wGwYJKoZIhvcNAQkBFg5oYTUwbTJAd3NjLm5ldDELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAlRYMQ8wDQYDVQQHEwZEYWxsYXMxEjAQBgNVBAMTCWhhNTB3c2NtMoIJAMLVmcjjDwOkMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAGImnSqmMfFoFsbMVOmCvRoyDgdkIKQ7OSG+z5ZVDuOAci1Uih/HUaSyQY9zsaQSb0Q2RRcxLa1AS1YLApoVuBX9Id5gPkNVmzyE6bOlhTWxbsSepWxVcw3eDSalLhB1RMVl+UbVjQsDe4Njii0pqKQzBs502kP2yFLk+sohGhNpepBFZvnqmlEZIwkrpUHGny0S/3AdRSQNbJhVlwIgRW2TV913OsvVJ/rfZrYDB74cDr6Ir5i0uZ56KBQVqV3I4YKQhe0QDzq6DfuLBMDNKD4LoGyZSJMe1udtqTYFJJpKhS04yWsIrXHx1boDs/i4DF5nTCYKqY2MXHuPVK1M5DQ=</X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </KeyDescriptor>
+    </RoleDescriptor>
+    <ContactPerson contactType="technical">
+      <Company>HA50 Research Institute</Company>
+      <GivenName>Chin Ho</GivenName>
+      <SurName>Kelly</SurName>
+      <EmailAddress>chinho.Kelly@wscm2.net</EmailAddress>
+      <TelephoneNumber>4845555555</TelephoneNumber>
+    </ContactPerson>
+  </EntityDescriptor>
+  <EntityDescriptor entityID="ha50wspwsc">
+    <RoleDescriptor xmlns:q6="http://gfipm.net/standards/metadata/2.0/webservices" xsi:type="q6:GFIPMWebServiceConsumerType" protocolSupportEnumeration="http://gfipm.net/standards/webservices/1.0/user-consumer-provider-sip.html" ServiceDisplayName="Chained-WebServiceProviderWebServiceConsumer" ServiceDescription="The GFIPM HA50 Chained Web Service Consumer">
+      <Extensions>
+        <EntityAttribute xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="gfipm:2.0:entity:TechnicalRole" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" xmlns="http://gfipm.net/standards/metadata/2.0/entity">
+          <EntityAttributeValue xsi:type="xsd:string">WSC</EntityAttributeValue>
+        </EntityAttribute>
+        <EntityAttribute xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="gfipm:2.0:entity:OwnerAgencyCountryCode" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" xmlns="http://gfipm.net/standards/metadata/2.0/entity">
+          <EntityAttributeValue xsi:type="xsd:string">US</EntityAttributeValue>
+        </EntityAttribute>
+      </Extensions>
+      <KeyDescriptor use="signing">
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <X509Data>
+            <X509Certificate>MIID+jCCAuKgAwIBAgIJAM1MR6u9XoyYMA0GCSqGSIb3DQEBBQUAMFsxGzAZBgkqhkiG9w0BCQEWDGhhNTBAd3NwLm5ldDELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkdBMQ0wCwYDVQQHEwRSb21lMRMwEQYDVQQDEwpIQTUwV1NQV1NDMB4XDTEyMDMyOTAxMDMwMloXDTIzMDYxNjAxMDMwMlowWzEbMBkGCSqGSIb3DQEJARYMaGE1MEB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEzARBgNVBAMTCkhBNTBXU1BXU0MwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCiPbsvKADkUtvNKKj9lk7uS10c9rt840vBy1A1F7Pmqo8z3zqZNIIVAF7N/WYFjfsFJDXq6pXif3awYnuLtxAh13M55L/RAEsiicyCufty4i9Ho9BpBwS/xPVGPONsBQSWF8qt+K4vV9Q2OlB13qBREHUXfdLAhc6fBMF8PhQFMptCB9tUjn5AT6bWo0qLu5wOZtJFqT3goAQbKT7Fs8zqBfyxcikvFeiYABCb7qnX2R8rNHsRv4auB5Yhy9UpnJvD5rVvZF0cid4ieKpDUjiU2ZA9oCMgI/jTY/dlDxe+B3ub4/8hEYFmgg6jqCO7Rcu26PnGode4GrKQVUCDsDKnAgMBAAGjgcAwgb0wHQYDVR0OBBYEFHfYYN/7BdEN1TYtw04pny5UVS0ZMIGNBgNVHSMEgYUwgYKAFHfYYN/7BdEN1TYtw04pny5UVS0ZoV+kXTBbMRswGQYJKoZIhvcNAQkBFgxoYTUwQHdzcC5uZXQxCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJHQTENMAsGA1UEBxMEUm9tZTETMBEGA1UEAxMKSEE1MFdTUFdTQ4IJAM1MR6u9XoyYMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAFeGIt8Oq6q1A8UvBpk3c31wJUElvQpMwz1uybXyrGr+RPsASxtopqTpXA54dwRi/tyKGdCpxZzlH3j3B591vMN/GlYcIJgU7gzvyWb6fWrF8oP9jYxZZVLwC5fjHN/DboRXkXpTGYXNqNygc5BPDBFyVTORqcmofTGQXktPTXPtsvw/IfERUnqNbhYuPztXykWo3iWNVGcvRPrzCSwcfA1FmGi4QgSGvv4sCKM0sUh0KDLOHyvu2ELHFFnepn9qrXU7ZKFne+zh1jqbHqbqHZXLqWbmZ/xdjnGpGJLeMZaJ361w4qjwmZ0EOgFPjhWICQoVnExKMpTNz0JIeugRW/w=</X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </KeyDescriptor>
+      <KeyDescriptor use="encryption">
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <X509Data>
+            <X509Certificate>MIID+jCCAuKgAwIBAgIJAM1MR6u9XoyYMA0GCSqGSIb3DQEBBQUAMFsxGzAZBgkqhkiG9w0BCQEWDGhhNTBAd3NwLm5ldDELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkdBMQ0wCwYDVQQHEwRSb21lMRMwEQYDVQQDEwpIQTUwV1NQV1NDMB4XDTEyMDMyOTAxMDMwMloXDTIzMDYxNjAxMDMwMlowWzEbMBkGCSqGSIb3DQEJARYMaGE1MEB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEzARBgNVBAMTCkhBNTBXU1BXU0MwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCiPbsvKADkUtvNKKj9lk7uS10c9rt840vBy1A1F7Pmqo8z3zqZNIIVAF7N/WYFjfsFJDXq6pXif3awYnuLtxAh13M55L/RAEsiicyCufty4i9Ho9BpBwS/xPVGPONsBQSWF8qt+K4vV9Q2OlB13qBREHUXfdLAhc6fBMF8PhQFMptCB9tUjn5AT6bWo0qLu5wOZtJFqT3goAQbKT7Fs8zqBfyxcikvFeiYABCb7qnX2R8rNHsRv4auB5Yhy9UpnJvD5rVvZF0cid4ieKpDUjiU2ZA9oCMgI/jTY/dlDxe+B3ub4/8hEYFmgg6jqCO7Rcu26PnGode4GrKQVUCDsDKnAgMBAAGjgcAwgb0wHQYDVR0OBBYEFHfYYN/7BdEN1TYtw04pny5UVS0ZMIGNBgNVHSMEgYUwgYKAFHfYYN/7BdEN1TYtw04pny5UVS0ZoV+kXTBbMRswGQYJKoZIhvcNAQkBFgxoYTUwQHdzcC5uZXQxCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJHQTENMAsGA1UEBxMEUm9tZTETMBEGA1UEAxMKSEE1MFdTUFdTQ4IJAM1MR6u9XoyYMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAFeGIt8Oq6q1A8UvBpk3c31wJUElvQpMwz1uybXyrGr+RPsASxtopqTpXA54dwRi/tyKGdCpxZzlH3j3B591vMN/GlYcIJgU7gzvyWb6fWrF8oP9jYxZZVLwC5fjHN/DboRXkXpTGYXNqNygc5BPDBFyVTORqcmofTGQXktPTXPtsvw/IfERUnqNbhYuPztXykWo3iWNVGcvRPrzCSwcfA1FmGi4QgSGvv4sCKM0sUh0KDLOHyvu2ELHFFnepn9qrXU7ZKFne+zh1jqbHqbqHZXLqWbmZ/xdjnGpGJLeMZaJ361w4qjwmZ0EOgFPjhWICQoVnExKMpTNz0JIeugRW/w=</X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </KeyDescriptor>
+    </RoleDescriptor>
+    <ContactPerson contactType="technical">
+      <Company>HA50 Research Institute</Company>
+      <GivenName>Chin Ho</GivenName>
+      <SurName>Kelly</SurName>
+      <EmailAddress>chinho.Kelly@wsc.net</EmailAddress>
+      <TelephoneNumber>4845555555</TelephoneNumber>
+    </ContactPerson>
+  </EntityDescriptor>
+  <EntityDescriptor entityID="curewspm1">
+    <RoleDescriptor xmlns:q7="http://gfipm.net/standards/metadata/2.0/webservices" xsi:type="q7:GFIPMWebServiceProviderType" protocolSupportEnumeration="http://gfipm.net/standards/webservices/1.0/consumer-provider-sip.html" ServiceDisplayName="WebServiceProvider M1" ServiceDescription="The GFIPM CURE M1 Web Service Provider">
+      <KeyDescriptor use="signing">
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <X509Data>
+            <X509Certificate>MIID/TCCAuWgAwIBAgIJANr/UdbtmFm5MA0GCSqGSIb3DQEBBQUAMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMUB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmV3c3BtMTAeFw0xMjA0MTgxODEwMjJaFw0xNzExMjYxODEwMjJaMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMUB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmV3c3BtMTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMti3ls5AhD3GSyzdVu+w7pEXXFEwiRj831/9CCM2q+FbLArj8SK1OgpGe3Xoi2wNyGpqPMDaxln+fuf8Obj9qV+QHtuw3ZwUiUKxcR5/bPlIU08JMOkdjWr8fM/2d6XA8y7/FNFlHVn0QDiPLUrpYO3setjBRavhbb/yyOsWTv+0rv/DP9tdrohJVL3aB599QTaVIDMyonOoRmLdQFcvK2II2Aygm9ZPWmJZoyE5VIgIZp3q9tCtuFi1bmMBOP17cnV5wm9zgE6LsvJbMrWamreUgMJUgHWdBZF1gCI1kuCT5caXPNJzcOqN0j638ygw03ooapGuKhebjmQPhVdQNsCAwEAAaOBwTCBvjAdBgNVHQ4EFgQUoVayJJclSj1VHWjFIhy3PIaZiUwwgY4GA1UdIwSBhjCBg4AUoVayJJclSj1VHWjFIhy3PIaZiUyhYKReMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMUB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmV3c3BtMYIJANr/UdbtmFm5MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAIoLlYBWq3qy3y80gpkQIFM//LkCR+2Qe5hkwRi0v8Nbty5gEe+OYgFQqG/YhPQ/+0sOBE0HCtPe+U+g01c0N6TfLYJWbbcAzSlzp0D+xKxwc1n6Z0bjW6qbDwv1JNgo+kdIWT09tkiQpAipyO96wYlt/lMs/jTJpdm9yeAc7Wciav5JhfTX5g0EiIwAGvpCA18cH8caRDlAlhYnxuMO5Zr5xLLyiIvwgEAeiaK3wKnMP+vDIpzjI6819qxmL1J/5yUauQlM2TIPW1qJGnzn6z/pCDc5Im6uT3SNr0tiytXwtwr1GLbu72ezI1Qd05IjJKHdX+hhaj64wjdsXcxDw5w=</X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </KeyDescriptor>
+      <KeyDescriptor use="encryption">
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <X509Data>
+            <X509Certificate>MIID/TCCAuWgAwIBAgIJANr/UdbtmFm5MA0GCSqGSIb3DQEBBQUAMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMUB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmV3c3BtMTAeFw0xMjA0MTgxODEwMjJaFw0xNzExMjYxODEwMjJaMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMUB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmV3c3BtMTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMti3ls5AhD3GSyzdVu+w7pEXXFEwiRj831/9CCM2q+FbLArj8SK1OgpGe3Xoi2wNyGpqPMDaxln+fuf8Obj9qV+QHtuw3ZwUiUKxcR5/bPlIU08JMOkdjWr8fM/2d6XA8y7/FNFlHVn0QDiPLUrpYO3setjBRavhbb/yyOsWTv+0rv/DP9tdrohJVL3aB599QTaVIDMyonOoRmLdQFcvK2II2Aygm9ZPWmJZoyE5VIgIZp3q9tCtuFi1bmMBOP17cnV5wm9zgE6LsvJbMrWamreUgMJUgHWdBZF1gCI1kuCT5caXPNJzcOqN0j638ygw03ooapGuKhebjmQPhVdQNsCAwEAAaOBwTCBvjAdBgNVHQ4EFgQUoVayJJclSj1VHWjFIhy3PIaZiUwwgY4GA1UdIwSBhjCBg4AUoVayJJclSj1VHWjFIhy3PIaZiUyhYKReMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMUB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmV3c3BtMYIJANr/UdbtmFm5MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAIoLlYBWq3qy3y80gpkQIFM//LkCR+2Qe5hkwRi0v8Nbty5gEe+OYgFQqG/YhPQ/+0sOBE0HCtPe+U+g01c0N6TfLYJWbbcAzSlzp0D+xKxwc1n6Z0bjW6qbDwv1JNgo+kdIWT09tkiQpAipyO96wYlt/lMs/jTJpdm9yeAc7Wciav5JhfTX5g0EiIwAGvpCA18cH8caRDlAlhYnxuMO5Zr5xLLyiIvwgEAeiaK3wKnMP+vDIpzjI6819qxmL1J/5yUauQlM2TIPW1qJGnzn6z/pCDc5Im6uT3SNr0tiytXwtwr1GLbu72ezI1Qd05IjJKHdX+hhaj64wjdsXcxDw5w=</X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </KeyDescriptor>
+      <q7:WebServiceEndpoint>
+        <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+          <Address>https://curewspm1:8181/m1wsp/services/cvc</Address>
+        </EndpointReference>
+      </q7:WebServiceEndpoint>
+      <q7:MetadataExchangeEndpoint>
+        <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+          <Address>https://curewspm1:8181/m1wsp/services/cvc/mex</Address>
+        </EndpointReference>
+      </q7:MetadataExchangeEndpoint>
+      <q7:WSDLURL>
+        <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+          <Address>https://curewspm1:8181/m1wsp/services/cvc?wsdl</Address>
+        </EndpointReference>
+      </q7:WSDLURL>
+    </RoleDescriptor>
+    <ContactPerson contactType="technical">
+      <Company>CURE Research Institute</Company>
+      <GivenName>Roger</GivenName>
+      <SurName>Waters</SurName>
+      <EmailAddress>roger.waters@wspm1.net</EmailAddress>
+      <TelephoneNumber>4145555555</TelephoneNumber>
+    </ContactPerson>
+  </EntityDescriptor>
+  <EntityDescriptor entityID="curewscm1">
+    <RoleDescriptor xmlns:q8="http://gfipm.net/standards/metadata/2.0/webservices" xsi:type="q8:GFIPMWebServiceConsumerType" protocolSupportEnumeration="http://gfipm.net/standards/webservices/1.0/consumer-provider-sip.html" ServiceDisplayName="WebServiceConsumer M1" ServiceDescription="The GFIPM CURE M1 Web Service Consumer">
+      <Extensions>
+        <EntityAttribute xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="gfipm:2.0:entity:TechnicalRole" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" xmlns="http://gfipm.net/standards/metadata/2.0/entity">
+          <EntityAttributeValue xsi:type="xsd:string">WSC</EntityAttributeValue>
+        </EntityAttribute>
+        <EntityAttribute xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="gfipm:2.0:entity:OwnerAgencyCountryCode" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" xmlns="http://gfipm.net/standards/metadata/2.0/entity">
+          <EntityAttributeValue xsi:type="xsd:string">VQ</EntityAttributeValue>
+        </EntityAttribute>
+      </Extensions>
+      <KeyDescriptor use="signing">
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <X509Data>
+            <X509Certificate>MIID/TCCAuWgAwIBAgIJAMPjG7H0RVONMA0GCSqGSIb3DQEBBQUAMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMUB3c2MubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmV3c2NtMTAeFw0xMjA0MTgxODEwMThaFw0xNzExMjYxODEwMThaMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMUB3c2MubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmV3c2NtMTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMnmw0h030ee36WtDfYW+T+3Y5oBsigPj3OmM/U5tbjuMJ/jXYkY/60tEN91gZDeEXxHTwv9WZnwp9qd3V1Xm1eo+TyiF8ZuipIjnzM0avKQVovJenkOAs9SsdUp226Fnhkg+K07cBpWN+y2UnWgQbtVWISC+B3M7M+Gd/676qtDa4WDETi8Qt/w9ylOpkAI35rl9HoErnaNEt+vZHSLxK6eu1V+M2/StanOciT440gccmza/Tgav2pE+/1K8emjpfqpmzC4pQcFHyZaJaCIpYojCSQfpfHShIqjPm0/NXQQqVpSR+vepuJJeLf7KWdQSClm67SEVelOJzjIInHgqKECAwEAAaOBwTCBvjAdBgNVHQ4EFgQU+ulflcpw7OyrzPVQwl7XwYQfpQUwgY4GA1UdIwSBhjCBg4AU+ulflcpw7OyrzPVQwl7XwYQfpQWhYKReMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMUB3c2MubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmV3c2NtMYIJAMPjG7H0RVONMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAKH+WYOC/RdLs0wh2u9fXymG8/mBzyexh1RK5z09EocQjUZNC+0ChbUexPEvKaKBJVzJrybsAbpGSPJQzojhuHsXU2kUXvRZJHpszJT3k7DtHvmqdJkK78hChdZ79432C8935U/ttP1O9lINhAeCQLxQlmAwli5XzON/y5GvEgz49xb0zJfiFnY8u+QV+A16Opqe3t9Gz6oL2DA5bbywXyDktdxxGp4VF9nnuf2vkI+M42uAU1L4H6tcphNncbpVEaYD5/SrvXLN7B2wovejvj86OjGGh/qb9DpzcojT5WAWkkb6WeAak7EylKqi7f+V2CoJTweFuOcOmkQEoo6GU9I=</X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </KeyDescriptor>
+      <KeyDescriptor use="encryption">
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <X509Data>
+            <X509Certificate>MIID/TCCAuWgAwIBAgIJAMPjG7H0RVONMA0GCSqGSIb3DQEBBQUAMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMUB3c2MubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmV3c2NtMTAeFw0xMjA0MTgxODEwMThaFw0xNzExMjYxODEwMThaMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMUB3c2MubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmV3c2NtMTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMnmw0h030ee36WtDfYW+T+3Y5oBsigPj3OmM/U5tbjuMJ/jXYkY/60tEN91gZDeEXxHTwv9WZnwp9qd3V1Xm1eo+TyiF8ZuipIjnzM0avKQVovJenkOAs9SsdUp226Fnhkg+K07cBpWN+y2UnWgQbtVWISC+B3M7M+Gd/676qtDa4WDETi8Qt/w9ylOpkAI35rl9HoErnaNEt+vZHSLxK6eu1V+M2/StanOciT440gccmza/Tgav2pE+/1K8emjpfqpmzC4pQcFHyZaJaCIpYojCSQfpfHShIqjPm0/NXQQqVpSR+vepuJJeLf7KWdQSClm67SEVelOJzjIInHgqKECAwEAAaOBwTCBvjAdBgNVHQ4EFgQU+ulflcpw7OyrzPVQwl7XwYQfpQUwgY4GA1UdIwSBhjCBg4AU+ulflcpw7OyrzPVQwl7XwYQfpQWhYKReMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMUB3c2MubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmV3c2NtMYIJAMPjG7H0RVONMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAKH+WYOC/RdLs0wh2u9fXymG8/mBzyexh1RK5z09EocQjUZNC+0ChbUexPEvKaKBJVzJrybsAbpGSPJQzojhuHsXU2kUXvRZJHpszJT3k7DtHvmqdJkK78hChdZ79432C8935U/ttP1O9lINhAeCQLxQlmAwli5XzON/y5GvEgz49xb0zJfiFnY8u+QV+A16Opqe3t9Gz6oL2DA5bbywXyDktdxxGp4VF9nnuf2vkI+M42uAU1L4H6tcphNncbpVEaYD5/SrvXLN7B2wovejvj86OjGGh/qb9DpzcojT5WAWkkb6WeAak7EylKqi7f+V2CoJTweFuOcOmkQEoo6GU9I=</X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </KeyDescriptor>
+    </RoleDescriptor>
+    <ContactPerson contactType="technical">
+      <Company>CURE Research Institute</Company>
+      <GivenName>Charles</GivenName>
+      <SurName>Dickens</SurName>
+      <EmailAddress>charles.dickens@wscm1.net</EmailAddress>
+      <TelephoneNumber>40845555555</TelephoneNumber>
+    </ContactPerson>
+  </EntityDescriptor>
+  <EntityDescriptor entityID="cureidpm2">
+    <RoleDescriptor xmlns:q9="http://gfipm.net/standards/metadata/2.0/webservices" xsi:type="q9:GFIPMAssertionDelegateServiceType" protocolSupportEnumeration="http://gfipm.net/standards/webservices/1.0/saml-assertion-delegate-service-sip.html" ServiceDisplayName="ADS for CUREIDPM2" ServiceDescription="The Assertion Delegate Service for the CURE IDP M2">
+      <KeyDescriptor use="signing">
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <X509Data>
+            <X509Certificate>MIID/TCCAuWgAwIBAgIJAPrgcmnPAZ6LMA0GCSqGSIb3DQEBBQUAMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMkBpZHAubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmVpZHBtMjAeFw0xMjA0MTgxODEwMDNaFw0xNzExMjYxODEwMDNaMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMkBpZHAubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmVpZHBtMjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK1fNsw2RvE6gE/m3Vw9tBXI4PmI44tgNahA65zMCxlxEGrMXK01oyaRW307gMZ/YQ1sCJsbGvfMmumWrH9n5mZ7nPKkt5ZBQ6SRso93RHEo03jTb4oro5/MFdPXR9hii1Ezqubz38KsMuj1o3gOqr7jNUlUAA8juswgqJwev7bxvbaikoR0/7Jwpy3egWvTd1vKOp8TXuhBCK04nVJgYfBcGUiVdkoXowFc/FJDEypuHOaEpIllVCC6exf309E8TjMTwk0vv4uQYAYG0nLMmQetmYA7O9Q8Ks4L0/22+GF/T94Or1NP//dFkbJ+3Z7XclTXACyDqden751qZmw0M0ECAwEAAaOBwTCBvjAdBgNVHQ4EFgQUaFa1v1gWxEL6LvSQe5NtW5NX+PwwgY4GA1UdIwSBhjCBg4AUaFa1v1gWxEL6LvSQe5NtW5NX+PyhYKReMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMkBpZHAubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmVpZHBtMoIJAPrgcmnPAZ6LMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAHVfJ0eSznRYGpVhHusL5lCQCLA8dqSGpM48fYrwFXrG3UeoU0SF6UpEU8X3zB4qHIiDFYIvXdqHvQB0c7MPbXtMogLlDhKAblrY9MjJgDvl5JW17IZDQedyOIJ7sR7MyZgi4MbMnvET1Am4IPFTlTDXoGZPfRmAr2pqJ2PXeam2M8xiN+JiiS4c6zVLFZHLVI2GrgfDPchN/7+DuJDZnXYNcEYc3ydQtXOOKSTdkAi5xcXxZ+l8KZwrQHjJgrVAHJfRcFYwTNFxux1oQkJIJfL90MxlPv9QrYrBEVwxVd7NGFsvVdOaaQRA/rOUwweKZdUOPK+PqgplY+rLTWk8sQE=</X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </KeyDescriptor>
+      <KeyDescriptor use="encryption">
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <X509Data>
+            <X509Certificate>MIID/TCCAuWgAwIBAgIJAPrgcmnPAZ6LMA0GCSqGSIb3DQEBBQUAMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMkBpZHAubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmVpZHBtMjAeFw0xMjA0MTgxODEwMDNaFw0xNzExMjYxODEwMDNaMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMkBpZHAubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmVpZHBtMjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK1fNsw2RvE6gE/m3Vw9tBXI4PmI44tgNahA65zMCxlxEGrMXK01oyaRW307gMZ/YQ1sCJsbGvfMmumWrH9n5mZ7nPKkt5ZBQ6SRso93RHEo03jTb4oro5/MFdPXR9hii1Ezqubz38KsMuj1o3gOqr7jNUlUAA8juswgqJwev7bxvbaikoR0/7Jwpy3egWvTd1vKOp8TXuhBCK04nVJgYfBcGUiVdkoXowFc/FJDEypuHOaEpIllVCC6exf309E8TjMTwk0vv4uQYAYG0nLMmQetmYA7O9Q8Ks4L0/22+GF/T94Or1NP//dFkbJ+3Z7XclTXACyDqden751qZmw0M0ECAwEAAaOBwTCBvjAdBgNVHQ4EFgQUaFa1v1gWxEL6LvSQe5NtW5NX+PwwgY4GA1UdIwSBhjCBg4AUaFa1v1gWxEL6LvSQe5NtW5NX+PyhYKReMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMkBpZHAubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmVpZHBtMoIJAPrgcmnPAZ6LMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAHVfJ0eSznRYGpVhHusL5lCQCLA8dqSGpM48fYrwFXrG3UeoU0SF6UpEU8X3zB4qHIiDFYIvXdqHvQB0c7MPbXtMogLlDhKAblrY9MjJgDvl5JW17IZDQedyOIJ7sR7MyZgi4MbMnvET1Am4IPFTlTDXoGZPfRmAr2pqJ2PXeam2M8xiN+JiiS4c6zVLFZHLVI2GrgfDPchN/7+DuJDZnXYNcEYc3ydQtXOOKSTdkAi5xcXxZ+l8KZwrQHjJgrVAHJfRcFYwTNFxux1oQkJIJfL90MxlPv9QrYrBEVwxVd7NGFsvVdOaaQRA/rOUwweKZdUOPK+PqgplY+rLTWk8sQE=</X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </KeyDescriptor>
+      <q9:DelegatedTokenServiceEndpoint>
+        <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+          <Address>https://cureidpm2:8181/m2sts/services/sts</Address>
+        </EndpointReference>
+      </q9:DelegatedTokenServiceEndpoint>
+      <q9:WSDLURL>
+        <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+          <Address>https://cureidpm2:8181/m2sts/services/sts?wsdl</Address>
+        </EndpointReference>
+      </q9:WSDLURL>
+      <q9:MetadataExchangeEndpoint>
+        <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+          <Address>https://cureidpm2:8181/m2sts/services/sts/mex</Address>
+        </EndpointReference>
+      </q9:MetadataExchangeEndpoint>
+    </RoleDescriptor>
+    <ContactPerson contactType="technical">
+      <Company>CURE Research Institute</Company>
+      <GivenName>Jack</GivenName>
+      <SurName>Shephard</SurName>
+      <EmailAddress>jack.shephard@idpm2.net</EmailAddress>
+      <TelephoneNumber>4145555555</TelephoneNumber>
+    </ContactPerson>
+  </EntityDescriptor>
+  <EntityDescriptor entityID="curewspm2">
+    <RoleDescriptor xmlns:q10="http://gfipm.net/standards/metadata/2.0/webservices" xsi:type="q10:GFIPMWebServiceProviderType" protocolSupportEnumeration="http://gfipm.net/standards/webservices/1.0/user-consumer-provider-sip.html" ServiceDisplayName="WebServiceProvider M2" ServiceDescription="The GFIPM CURE M2 Web Service Provider">
+      <KeyDescriptor use="signing">
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <X509Data>
+            <X509Certificate>MIID/TCCAuWgAwIBAgIJAPWhuI5cvXAnMA0GCSqGSIb3DQEBBQUAMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMkB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmV3c3BtMjAeFw0xMjA0MTgxODEwMjVaFw0xNzExMjYxODEwMjVaMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMkB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmV3c3BtMjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALRXnBceZsoUaJcP56hqr0iyh7N3XWhZczoUuyfJ9WtVmTarD0wc5O0/RZP/0+7fC9XhipWDHPll/nPYCyfSas7kZEGkKoBPi7duprBS03341V240XbD+KK7J8cElnMaXSRstUlEGj9UE1vdi0kfYda2XPcEvIc/DYUJkv6ZgGWZpORd7jPaFemCdP5UEn9wSQMmyqx1msoeTUCzyHnwcyygRU5TtfoHnm8jGqNhr1wQCqWwgg4bOwaR6pk899eY9bDXO2I04g78dPLR0TNAs6dx4zoBl/DoUmWsevyGF/eX0TQg+qIg7j0PgIzZ1cZoEZYjtH8dFIYazgEMnsw4ViMCAwEAAaOBwTCBvjAdBgNVHQ4EFgQUem51bdRtz8qNx6djQpjFboldZ3kwgY4GA1UdIwSBhjCBg4AUem51bdRtz8qNx6djQpjFboldZ3mhYKReMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMkB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmV3c3BtMoIJAPWhuI5cvXAnMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAH3OqQw+YXQ75JcM+A5otSUsWyFjSjpD8xvo9BUts+/L5ySQJKSUZVZD+7RRHxjlXXwb1tst9izJxn4EUBW8SXQ8Co50pzF8Bn4cLpBJ3NRE9b5aQ0MtY/fDPqWTVoqU0VAzJza6lFgnlbIhnfE9SrhaCL0buPIj+n/zY424nbYyEG+R3rjDm1XwjPflTVZygXG822jaZHHu+FFSDY4UQCygUBUBUxCHRWEqeTHCW+iRqFiHKvU9uxcCP4VnirgmzBKmeWAJg3gZ1KUACK+A6vXcmta8D4q5QN/QuScLJjnGX72EukXalxpaa6P88ColoIkeUboWPBIzlMtUDcMncuY=</X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </KeyDescriptor>
+      <KeyDescriptor use="encryption">
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <X509Data>
+            <X509Certificate>MIID/TCCAuWgAwIBAgIJAPWhuI5cvXAnMA0GCSqGSIb3DQEBBQUAMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMkB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmV3c3BtMjAeFw0xMjA0MTgxODEwMjVaFw0xNzExMjYxODEwMjVaMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMkB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmV3c3BtMjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALRXnBceZsoUaJcP56hqr0iyh7N3XWhZczoUuyfJ9WtVmTarD0wc5O0/RZP/0+7fC9XhipWDHPll/nPYCyfSas7kZEGkKoBPi7duprBS03341V240XbD+KK7J8cElnMaXSRstUlEGj9UE1vdi0kfYda2XPcEvIc/DYUJkv6ZgGWZpORd7jPaFemCdP5UEn9wSQMmyqx1msoeTUCzyHnwcyygRU5TtfoHnm8jGqNhr1wQCqWwgg4bOwaR6pk899eY9bDXO2I04g78dPLR0TNAs6dx4zoBl/DoUmWsevyGF/eX0TQg+qIg7j0PgIzZ1cZoEZYjtH8dFIYazgEMnsw4ViMCAwEAAaOBwTCBvjAdBgNVHQ4EFgQUem51bdRtz8qNx6djQpjFboldZ3kwgY4GA1UdIwSBhjCBg4AUem51bdRtz8qNx6djQpjFboldZ3mhYKReMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMkB3c3AubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmV3c3BtMoIJAPWhuI5cvXAnMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAH3OqQw+YXQ75JcM+A5otSUsWyFjSjpD8xvo9BUts+/L5ySQJKSUZVZD+7RRHxjlXXwb1tst9izJxn4EUBW8SXQ8Co50pzF8Bn4cLpBJ3NRE9b5aQ0MtY/fDPqWTVoqU0VAzJza6lFgnlbIhnfE9SrhaCL0buPIj+n/zY424nbYyEG+R3rjDm1XwjPflTVZygXG822jaZHHu+FFSDY4UQCygUBUBUxCHRWEqeTHCW+iRqFiHKvU9uxcCP4VnirgmzBKmeWAJg3gZ1KUACK+A6vXcmta8D4q5QN/QuScLJjnGX72EukXalxpaa6P88ColoIkeUboWPBIzlMtUDcMncuY=</X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </KeyDescriptor>
+      <q10:WebServiceEndpoint>
+        <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+          <Address>https://curewspm2:8181/m2wsp/services/cvc</Address>
+        </EndpointReference>
+      </q10:WebServiceEndpoint>
+      <q10:MetadataExchangeEndpoint>
+        <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+          <Address>https://curewspm2:8181/m2wsp/services/cvc/mex</Address>
+        </EndpointReference>
+      </q10:MetadataExchangeEndpoint>
+      <q10:WSDLURL>
+        <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+          <Address>https://curewspm2:8181/m2wsp/services/cvc?wsdl</Address>
+        </EndpointReference>
+      </q10:WSDLURL>
+    </RoleDescriptor>
+    <ContactPerson contactType="technical">
+      <Company>CURE Research Institute</Company>
+      <GivenName>Kate</GivenName>
+      <SurName>Austen</SurName>
+      <EmailAddress>kate.austen@wspm2.net</EmailAddress>
+      <TelephoneNumber>4245555555</TelephoneNumber>
+    </ContactPerson>
+  </EntityDescriptor>
+  <EntityDescriptor entityID="curewscm2">
+    <RoleDescriptor xmlns:q11="http://gfipm.net/standards/metadata/2.0/webservices" xsi:type="q11:GFIPMWebServiceConsumerType" protocolSupportEnumeration="http://gfipm.net/standards/webservices/1.0/user-consumer-provider-sip.html" ServiceDisplayName="WebServiceConsumer M2" ServiceDescription="The GFIPM CURE M2 Web Service Consumer">
+      <Extensions>
+        <EntityAttribute xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="gfipm:2.0:entity:TechnicalRole" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" xmlns="http://gfipm.net/standards/metadata/2.0/entity">
+          <EntityAttributeValue xsi:type="xsd:string">WSC</EntityAttributeValue>
+        </EntityAttribute>
+        <EntityAttribute xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="gfipm:2.0:entity:OwnerAgencyCountryCode" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" xmlns="http://gfipm.net/standards/metadata/2.0/entity">
+          <EntityAttributeValue xsi:type="xsd:string">VQ</EntityAttributeValue>
+        </EntityAttribute>
+      </Extensions>
+      <KeyDescriptor use="signing">
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <X509Data>
+            <X509Certificate>MIID/TCCAuWgAwIBAgIJANdDvCuMOxlcMA0GCSqGSIb3DQEBBQUAMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMkB3c2MubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmV3c2NtMjAeFw0xMjA0MTgxODEwMTNaFw0xNzExMjYxODEwMTNaMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMkB3c2MubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmV3c2NtMjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALZdUmo1XGNeORaP61xv/5VW3xdVByEu0AaJu4a/YNd5gMxvgm1QiuIFMUO0uX6ktJ1T6iLq0PlvihjvmZYYrPIlj/uwBFBpi8aqj7ZqWe5oQ/DHn68r+AH5nh2WECejFMGfQj0VeLBLCwzlPVC9AHKJgD+3nE0HT7f5sN1CD7X78h6z6ye2/kdgq0MEBdRp50es1fjGlr5nU+A8P63INh5QYOp4HcPP9DKHa0IPTnBRRiMKucV8Lmf0Idj1Whs3pk5lVZmydegK1Vova0dTnI/ezcJkylBjk+QI6yjG5XntplAJS82xpPRUPmoH9anzFUixKEECdqWloP65JlToYU8CAwEAAaOBwTCBvjAdBgNVHQ4EFgQUPo23Cv/HbnMGyEyNlzgZ9Ao8hsgwgY4GA1UdIwSBhjCBg4AUPo23Cv/HbnMGyEyNlzgZ9Ao8hsihYKReMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMkB3c2MubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmV3c2NtMoIJANdDvCuMOxlcMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAFLIF5XqtProlPsSNLejV6Dqdx/aa1eC961O3klwFaGC6pc+4VuJnRXwHtYuZxrv0g/lrdM1bUTBMQBqT29J2pLPn8h/GJiUW7K32uClV5BrW1Php0+Wycg0oPyWdmLZ2yCn22hBeNNnGINywu+GeEY5mlfhNZPtMxo3pd0mcttwKpWiFfMelTF2a8vmVVHATK203Gvy+VJszZ/GRwMLQhKfZeg+v+t4LHFJt5HUUGUbOpd3Z2EmjVf/syQG43lgOaiBSM2XTm32GZKLSfu7xj0c1b0xvMiWAoFz08Cg2n0MfA0D+qIdN1uW1rYR2fx294pGLEpqj/FUMdYC1yIkGgg=</X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </KeyDescriptor>
+      <KeyDescriptor use="encryption">
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <X509Data>
+            <X509Certificate>MIID/TCCAuWgAwIBAgIJANdDvCuMOxlcMA0GCSqGSIb3DQEBBQUAMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMkB3c2MubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmV3c2NtMjAeFw0xMjA0MTgxODEwMTNaFw0xNzExMjYxODEwMTNaMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMkB3c2MubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmV3c2NtMjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALZdUmo1XGNeORaP61xv/5VW3xdVByEu0AaJu4a/YNd5gMxvgm1QiuIFMUO0uX6ktJ1T6iLq0PlvihjvmZYYrPIlj/uwBFBpi8aqj7ZqWe5oQ/DHn68r+AH5nh2WECejFMGfQj0VeLBLCwzlPVC9AHKJgD+3nE0HT7f5sN1CD7X78h6z6ye2/kdgq0MEBdRp50es1fjGlr5nU+A8P63INh5QYOp4HcPP9DKHa0IPTnBRRiMKucV8Lmf0Idj1Whs3pk5lVZmydegK1Vova0dTnI/ezcJkylBjk+QI6yjG5XntplAJS82xpPRUPmoH9anzFUixKEECdqWloP65JlToYU8CAwEAAaOBwTCBvjAdBgNVHQ4EFgQUPo23Cv/HbnMGyEyNlzgZ9Ao8hsgwgY4GA1UdIwSBhjCBg4AUPo23Cv/HbnMGyEyNlzgZ9Ao8hsihYKReMFwxHTAbBgkqhkiG9w0BCQEWDmN1cmVtMkB3c2MubmV0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCR0ExDTALBgNVBAcTBFJvbWUxEjAQBgNVBAMTCWN1cmV3c2NtMoIJANdDvCuMOxlcMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAFLIF5XqtProlPsSNLejV6Dqdx/aa1eC961O3klwFaGC6pc+4VuJnRXwHtYuZxrv0g/lrdM1bUTBMQBqT29J2pLPn8h/GJiUW7K32uClV5BrW1Php0+Wycg0oPyWdmLZ2yCn22hBeNNnGINywu+GeEY5mlfhNZPtMxo3pd0mcttwKpWiFfMelTF2a8vmVVHATK203Gvy+VJszZ/GRwMLQhKfZeg+v+t4LHFJt5HUUGUbOpd3Z2EmjVf/syQG43lgOaiBSM2XTm32GZKLSfu7xj0c1b0xvMiWAoFz08Cg2n0MfA0D+qIdN1uW1rYR2fx294pGLEpqj/FUMdYC1yIkGgg=</X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </KeyDescriptor>
+    </RoleDescriptor>
+    <ContactPerson contactType="technical">
+      <Company>CURE Research Institute</Company>
+      <GivenName>Hugo</GivenName>
+      <SurName>Reyes</SurName>
+      <EmailAddress>hugo.reyes@wscm2.net</EmailAddress>
+      <TelephoneNumber>4345555555</TelephoneNumber>
+    </ContactPerson>
+  </EntityDescriptor>
+</EntitiesDescriptor>

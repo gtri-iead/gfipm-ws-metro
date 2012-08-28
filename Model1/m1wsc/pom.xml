@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>jar</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>GFIPM Model 1 - WSC</name>
+    <groupId>edu.gatech.gtri.gfipm.model1</groupId>
+    <artifactId>m1wsc</artifactId>
+    <url>http://maven.apache.org</url>
+    <build>
+        <resources>
+            <resource>
+                <targetPath>META-INF</targetPath>
+                <directory>src</directory>
+                <includes/>
+            </resource>
+            <resource>
+                <directory>${basedir}/src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>${basedir}/target/generated</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.0.2</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <executable>java</executable>
+                    <workingDirectory>.</workingDirectory>
+                    <arguments>
+                        <argument>-classpath</argument>
+                        <classpath />
+                        <!--
+                        <argument>-Djava.util.logging.config.file=src/main/resources/logging.properties</argument>
+                        -Djavax.net.debug=all/ssl 
+                        <argument>-Djavax.net.ssl.keyStore=C:/Projects/gfipm/gfipm-ws/model1/m1wsc/src/hawaii50wsc-keystore.jks</argument>
+                        -->
+                        <!-- http://java.sun.com/javase/javaseforbusiness/docs/TLSReadme.html -->
+<!--                        <argument>-Dsun.security.ssl.allowUnsafeRenegotiation=true</argument> -->
+<!--                        <argument>-Djavax.net.ssl.keyStore=C:/Projects/gfipm/gfipm-ws/model1/m1wsc/src/main/resources/META-INF/curewsc-keystore.jks</argument>
+                        <argument>-Djavax.net.ssl.keyStorePassword=changeit</argument>
+                        <argument>-Djavax.net.ssl.trustStore=C:/Projects/gfipm/gfipm-ws/model1/m1wsc/src/main/resources/META-INF/curewsc-cacerts.jks</argument>
+                        <argument>-Djavax.net.ssl.trustStorePassword=changeit</argument>-->
+<!--                        <argument>-Djavax.net.debug=ssl</argument> -->
+<!--                        <argument>-Dcom.sun.xml.ws.transport.http.client.HttpTransportPipe.dump=true</argument>-->
+                        <argument>gov.niem.ws.sample.cvc.client.CommercialVehicleCollisionClient</argument>
+                    </arguments>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <repositories>
+        <repository>
+            <id>m2.dev.java.net</id>
+            <url>http://download.java.net/maven/2</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>maven-repository.java.net</id>
+            <name>Java.net Repository for Maven 1</name>
+            <url>http://download.java.net/maven/1/</url>
+            <layout>legacy</layout>
+        </repository>
+        <repository>
+            <id>glassfish.dev.java.net</id>
+            <url>http://download.java.net/maven/glassfish</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>ibiblio.maven2</id>
+            <name>IBIBLIO Public Repository Group</name>
+            <url>http://mirrors.ibiblio.org/pub/mirrors/maven2</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>maven2-repository.java.net</id>
+            <name>Java.net Repository for Maven 2</name>
+            <url>http://download.java.net/maven/2/</url>
+            <layout>default</layout>
+        </pluginRepository>
+    </pluginRepositories>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.jws</groupId>
+            <artifactId>jsr181-api</artifactId>
+            <version>1.0-MR1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.metro</groupId>
+            <artifactId>webservices-rt</artifactId>
+            <version>2.2</version>
+            <!-- remove provided if added by the netbeans -->
+        </dependency>
+        <dependency>
+            <groupId>edu.gatech.gtri.gfipm.ws</groupId>
+            <artifactId>wscontract</artifactId>
+            <classifier>lib-jaxws</classifier>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>         
+</project>

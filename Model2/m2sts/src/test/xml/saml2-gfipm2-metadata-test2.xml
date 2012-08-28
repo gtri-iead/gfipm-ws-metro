@@ -1,0 +1,133 @@
+<saml:Assertion xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
+	ID="_5d2d4835eb069818ee291d4a0e11dff2"
+	IssueInstant="2010-01-28T18:51:03.548Z" Version="2.0">
+	<saml:Issuer
+		Format="urn:oasis:names:tc:SAML:2.0:nameid-format:entity">
+		https://idp.ref.gfipm.net/idp/shibboleth
+	</saml:Issuer>
+	<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+	 [XML digital signature removed for brevity]
+	</ds:Signature>
+	<saml:Subject>
+		<saml:NameID
+			Format="urn:oasis:names:tc:SAML:2.0:nameid-format:transient">
+			_a587e69b6d76f7aad403b795c8160b8a
+		</saml:NameID>
+		<saml:SubjectConfirmation
+			Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
+			<saml:SubjectConfirmationData Address="10.50.14.130"
+				InResponseTo="_d6f2631f57762c11f41dd05bf6310a34"
+				NotOnOrAfter="2010-01-28T18:56:03.548Z"
+				Recipient="https://rhelsp.ref.gfipm.net/Shibboleth.sso/SAML2/POST" />
+		</saml:SubjectConfirmation>
+	</saml:Subject>
+	<saml:Conditions NotBefore="2010-01-28T18:51:03.548Z"
+		NotOnOrAfter="2010-01-28T18:56:03.548Z">
+		<saml:AudienceRestriction>
+			<saml:Audience>
+				https://rhelsp.ref.gfipm.net/shibboleth
+			</saml:Audience>
+		</saml:AudienceRestriction>
+	</saml:Conditions>
+	<saml:AuthnStatement AuthnInstant="2010-01-28T18:51:03.452Z"
+		SessionIndex="ad5e97f7afbe0a0372890b3a744f0d8a16dd8ae6621d30cf89a9409c62dbcd0c">
+		<saml:SubjectLocality Address="10.50.14.130" />
+		<saml:AuthnContext>
+			<saml:AuthnContextDeclRef>
+				urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport
+			</saml:AuthnContextDeclRef>
+		</saml:AuthnContext>
+	</saml:AuthnStatement>
+	<saml:AttributeStatement>
+		<saml:Attribute Name="gfipm:2.0:user:GivenName"
+			NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			<saml:AttributeValue
+				xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:type="xs:string">
+				Andy
+			</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="gfipm:2.0:user:SurName"
+			NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			<saml:AttributeValue
+				xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:type="xs:string">
+				Bernard
+			</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="gfipm:2.0:user:FederationId"
+			NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			<saml:AttributeValue
+				xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:type="xs:string">
+				GFIPM:IDP:ExampleIDP:USER:ab03
+			</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="gfipm:2.0:user:TelephoneNumber"
+			NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			<saml:AttributeValue
+				xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:type="xs:string">
+				404-555-3333
+			</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="gfipm:2.0:user:EmailAddressText"
+			NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			<saml:AttributeValue
+				xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:type="xs:string">
+				ab03@gfipm.net
+			</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="gfipm:2.0:user:EmployerName"
+			NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			<saml:AttributeValue
+				xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:type="xs:string">
+				Dunder Mifflin
+			</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="gfipm:2.0:user:IdentityProviderId"
+			NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			<saml:AttributeValue
+				xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:type="xs:string">
+				GFIPM:IDP:ExampleIDP
+			</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="gfipm:2.0:user:SwornLawEnforcementOfficerIndicator"
+			NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			<saml:AttributeValue
+				xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:type="xs:string">
+				true
+			</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="gfipm:2.0:user:CounterTerrorismDataSelfSearchHomePrivilegeIndicator"
+			NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			<saml:AttributeValue
+				xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:type="xs:string">
+				true
+			</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="gfipm:2.0:user:CriminalIntelligenceDataSelfSearchHomePrivilegeIndicator"
+			NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			<saml:AttributeValue
+				xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:type="xs:string">
+				false
+			</saml:AttributeValue>
+		</saml:Attribute>
+	</saml:AttributeStatement>
+</saml:Assertion>

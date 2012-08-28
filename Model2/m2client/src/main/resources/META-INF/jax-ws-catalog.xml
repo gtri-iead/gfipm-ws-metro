@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <!--system systemId="http://localhost:8888/mtom/services/mtomsample?wsdl" uri="wsdl/localhost_8888/mtom/mtomsample.wsdl"/-->
+<!--    <system systemId="http://localhost:8888/m1wsp/services/cvc?wsdl" uri="wsdl/CommercialVehicleCollisionWebserviceImpl.wsdl"/>    
+    <system systemId="http://localhost:8080/m1wsp/services/cvc?wsdl" uri="wsdl/CommercialVehicleCollisionWebserviceImpl.wsdl"/>    
+    <system systemId="https://curewspm2:8181/m1wsp/services/cvc?wsdl" uri="wsdl/CommercialVehicleCollisionWebserviceImpl.wsdl"/>-->
+    
+    <!-- TODO put entries for 
+        CVC wsdl http://curewscm2:8080/m2wsc/services/cvc?wsdl
+        STS wsdl http://cureidpm2:8080/m2sts/services/sts?wsdl -->
+<!--    <system systemId="http://ha50wspm2:8081/UserConsumerProvider/CommercialVehicleCollisionPortType-SV.svc?wsdl" uri="wsdl-wsp/CommercialVehicleCollisionWebserviceImpl.wsdl"/>
+    <system systemId="https://ha50wspm2:8553/UserConsumerProvider/CommercialVehicleCollisionPortType-SV.svc?wsdl" uri="wsdl-wsp/CommercialVehicleCollisionWebserviceImpl.wsdl"/>
+    <system systemId="http://ha50idpm2:8080/IDP-STS/Issue.svc?wsdl" uri="wsdl-wsp/net-idp-sts.wsdl"/>-->
+</catalog>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions 
+    targetNamespace="urn:examples.com:techniques:iepd:commercialVehicleCollision:ws:2.0"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:tns="urn:examples.com:techniques:iepd:commercialVehicleCollision:ws:2.0"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+    xmlns="http://schemas.xmlsoap.org/wsdl/">
+        
+    <wsdl:import 
+        namespace="urn:examples.com:techniques:iepd:commercialVehicleCollision:ws:2.0"
+        location="CommercialVehicleCollisionWebserviceIntf.xml"/>
+    
+    <wsdl:service name="CommercialVehicleCollisionWebService">
+        <wsdl:port name="CommercialVehicleCollisionPort" binding="tns:CommercialVehicleCollisionBinding">
+            <!-- <soap:address location="REPLACE_WITH_ACTUAL_URL"/> -->
+            <soap:address location="http://localhost:8888/m1wsp/services/cvc"/>
+        </wsdl:port>
+    </wsdl:service>
+    
+</wsdl:definitions>

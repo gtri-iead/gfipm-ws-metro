@@ -1,0 +1,14 @@
+<assembly>
+   <id>lib-jaxws</id>
+   <formats>
+      <format>jar</format>
+   </formats>
+   <includeBaseDirectory>false</includeBaseDirectory>
+   <fileSets>
+       <!-- TODO refactor packages - server side classes are included in the JAXB library -->
+      <fileSet>
+         <directory>target/classes/gov</directory>
+         <outputDirectory>/gov</outputDirectory>
+      </fileSet>     
+   </fileSets>
+</assembly>

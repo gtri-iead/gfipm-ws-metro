@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<saml2:Conditions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:SAML:2.0:assertion saml-schema-assertion-2.0.xsd urn:oasis:names:tc:SAML:2.0:conditions:delegation sstc-saml-delegation.xsd" xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion" NotBefore="2011-08-07T19:57:07.703Z" NotOnOrAfter="2011-08-07T20:02:07.703Z">
+	<saml2:AudienceRestriction>
+		<saml2:Audience>http://localhost:8080/calc/services/cvc</saml2:Audience>
+	</saml2:AudienceRestriction>
+	<saml2:Condition xmlns:del="urn:oasis:names:tc:SAML:2.0:conditions:delegation" xsi:type="del:DelegationRestrictionType">
+		<del:Delegate ConfirmationMethod="urn:oasis:names:tc:SAML:2.0:cm:sender-vouches" DelegationInstant="2011-08-18T07:21:24">
+			<saml2:NameID>john.doe@email.com</saml2:NameID>
+		</del:Delegate>
+	</saml2:Condition>
+</saml2:Conditions>
+
+
