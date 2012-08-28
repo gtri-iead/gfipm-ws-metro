@@ -6,7 +6,7 @@ A set of Java Metro example implementations of the GFIPM Web Services SIPs.
   This is a GFIPM Web Services Status System.  It is a java tool that uses Metro for
 WS-* support and is built with maven.
 
-  There are three main projects:
+  There are four main projects:
    - wscontract - This is the Web Services Contract that represents the sample web service.
        It specifies the WSDL interface and generates a good bit of automated code for use
        in the service and consumer.  This must be built first.
